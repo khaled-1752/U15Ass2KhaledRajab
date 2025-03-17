@@ -1,72 +1,78 @@
-/* Reset default margin and padding for a consistent layout */
+/* General Reset */
+body, h1, h2, p, a, nav, header, footer, main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif; /* Sets the default font style */
-    margin: 0;
-    padding: 0;
-    text-align: center; /* Centers text globally */
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f9;
 }
-/* Header Styling */
+
+/* Header Section */
 header {
-    display: flex; /* Uses flexbox for layout */
-    justify-content: space-between; /* Pushes content to opposite sides */
-    align-items: center; /* Aligns items vertically */
-    padding: 20px;
-    background-color: #f4f4f4; /* Light grey background */
-    border-bottom: 2px solid #ddd; /* Adds a subtle bottom border */
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
 }
-/* Logo Styling */
-.logo {
-    max-width: 100px; /* Restricts logo size */
+
+header h1 {
+  font-size: 2rem;
 }
-/* Navigation Bar Styling */
+
+header .logo {
+  width: 50px;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
+/* Navigation Bar */
 nav {
-    background-color: #333; /* Dark background for contrast */
-    padding: 10px;
+  background-color: #444;
+  text-align: center;
+  padding: 1rem 0;
 }
+
 nav a {
-    color: white; /* Sets text color */
-    text-decoration: none; /* Removes underline from links */
-    margin: 0 10px; /* Adds spacing between links */
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1rem;
 }
-/* Main Content Section Styling */
-.content {
-    background-color: #f9f9f9; /* Light gray background */
-    padding: 20px; /* Add space inside the main section */
-    border-radius: 10px; /* Rounded corners */
-    text-align: center; /* Center text */
-    width: 100%; /* Full width */
-     max-width: 100%; /* Ensure it doesn't exceed the viewport */
-    margin: 0 auto; /* Center horizontally */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    border: 2px solid #2c3e50; /* Dark blue-gray border */
+
+nav a:hover {
+  text-decoration: underline;
 }
-.content h2 {
-    color: #333; /* Dark gray color for heading */
-    font-size: 24px; /* Adjust font size */
+
+/* Main Content */
+main.mainpage {
+  padding: 2rem;
+  background-color: #fff;
+  color: #333;
 }
-.content p {
-    color: #666; /* Medium gray for paragraph text */
-    font-size: 16px; /* Adjust font size */
-    line-height: 1.5; /* Improve readability */
-    max-width: 80%; /* Limit text width for better readability */
-    margin: 0 auto; /* Center text */
+
+main h2 {
+  font-size: 1.8rem;
+  color: #444;
 }
-.sections {
-    display: flex; /* Enables side-by-side layout */
-    justify-content: space-around; /* Spaces sections evenly */
-    padding: 20px;
+
+main p {
+  font-size: 1rem;
 }
-/* Individual Section Styling */
-.section {
-    width: 45%; /* Sets equal width for both sections */
-    padding: 20px;
-    border: 1px solid #ddd; /* Adds a subtle border */
-    background-color: #f9f9f9; /* Light background for readability */
-}
-/* Footer Styling */
+
+/* Footer Section */
 footer {
-    background-color: #333; /* Matches nav bar */
-    color: white; /* White text for contrast */
-    padding: 10px;
-    position: relative;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+footer p {
+  font-size: 0.9rem;
 }
