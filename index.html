@@ -3,81 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Layout</title>
-    <style>
-        /* General styling for the entire page */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f0f0f0;
-        }
-
-        /* Navigation Bar */
-        .navigation {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #1f5c66;
-            color: white;
-            padding: 20px;
-            border-radius: 50px;
-        }
-
-        /* Logo styling */
-        .logo {
-            border: 2px solid purple;
-            padding: 10px;
-            color: black;
-        }
-
-        /* Header Section */
-        .header {
-            background-color: #1f5c66;
-            padding: 50px;
-            color: white;
-            font-size: 24px;
-            margin: 10px 0;
-        }
-
-        /* Main Content Section */
-        .main-content {
-            background-color: #1f5c66;
-            padding: 50px;
-            color: white;
-            font-size: 24px;
-            border-radius: 20px;
-            margin: 10px 0;
-        }
-
-        /* Footer Section */
-        .footer {
-            background-color: #1f5c66;
-            padding: 20px;
-            color: white;
-            display: flex;
-            justify-content: space-around;
-        }
-    </style>
+    <title>Slovenske Vzdelavacie Centrum</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation bar containing the logo and contact section -->
-    <div class="navigation">
-        <div class="logo">Logo</div>
-        <div>Navigation</div>
-        <div>Contact</div>
-    </div>
 
     <!-- Header Section -->
-    <div class="header">Header</div>
+    <header class="header">
+        <h1>Slovenske Vzdelavacie Centrum</h1>
+        <img src="logo.png" alt="Logo" class="logo">
+    </header>
 
-    <!-- Main Content Section -->
-    <div class="main-content">Main Content</div>
+    <!-- Navigation Bar -->
+    <nav class="navigation">
+        <a href="#">About Us</a>
+        <a href="#">Members</a>
+        <a href="#">Courses</a>
+        <a href="#">Education Games</a>
+        <a href="#">Events</a>
+    </nav>
 
-    <!-- Footer Section -->
-    <div class="footer">
-        <div>Socials</div>
-        <div>About us</div>
-    </div>
+    <!-- Main Content Area -->
+    <main class="content">
+        <h2>Welcome to Our Website</h2>
+        <p>This is the main content area where information is displayed</p>
+        
+        <section>
+            <h3>Section 1</h3>
+            <p>Content for the first section</p>
+        </section>
+
+        <section>
+            <h3>Section 2</h3>
+            <p>Content for the second section</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 Simple Layout. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
