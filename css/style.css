@@ -1,53 +1,54 @@
-/* General styling for the entire page */
+/* General styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #f4f4f8;
     text-align: center;
-    background-color: #f0f0f0;
 }
 
-/* Navigation Bar */
-.navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1f5c66;
-    color: white;
-    padding: 20px;
-    border-radius: 50px;
-}
-
-/* Logo styling */
-.logo {
-    border: 2px solid purple;
-    padding: 10px;
-    color: black;
-}
-
-/* Header Section */
+/* Header styling */
 .header {
-    background-color: #1f5c66;
-    padding: 50px;
+    background-color: #333;
     color: white;
-    font-size: 24px;
-    margin: 10px 0;
-}
-
-/* Main Content Section */
-.main-content {
-    background-color: #1f5c66;
-    padding: 50px;
-    color: white;
-    font-size: 24px;
-    border-radius: 20px;
-    margin: 10px 0;
-}
-
-/* Footer Section */
-.footer {
-    background-color: #1f5c66;
     padding: 20px;
+}
+
+.logo {
+    display: block;
+    margin: 10px auto;
+}
+
+/* Navigation bar */
+.navigation {
+    background-color: #444;
+    padding: 15px;
+}
+
+.navigation a {
     color: white;
-    display: flex;
-    justify-content: space-around;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+/* Main content area */
+.content {
+    background-color: #f0f0f5;
+    padding: 20px;
+    margin: 10px;
+}
+
+/* Sections */
+section {
+    margin: 20px;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
 }
