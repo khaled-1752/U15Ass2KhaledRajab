@@ -1,78 +1,53 @@
-/* General Reset */
-body, h1, h2, p, a, nav, header, footer, main {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* General styling for the entire page */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f9;
-}
-
-/* Header Section */
-header {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1rem 0;
-}
-
-header h1 {
-  font-size: 2rem;
-}
-
-header .logo {
-  width: 50px;
-  height: auto;
-  display: block;
-  margin: 1rem auto;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
 }
 
 /* Navigation Bar */
-nav {
-  background-color: #444;
-  text-align: center;
-  padding: 1rem 0;
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1f5c66;
+    color: white;
+    padding: 20px;
+    border-radius: 50px;
 }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 1rem;
-  font-size: 1rem;
+/* Logo styling */
+.logo {
+    border: 2px solid purple;
+    padding: 10px;
+    color: black;
 }
 
-nav a:hover {
-  text-decoration: underline;
+/* Header Section */
+.header {
+    background-color: #1f5c66;
+    padding: 50px;
+    color: white;
+    font-size: 24px;
+    margin: 10px 0;
 }
 
-/* Main Content */
-main.mainpage {
-  padding: 2rem;
-  background-color: #fff;
-  color: #333;
-}
-
-main h2 {
-  font-size: 1.8rem;
-  color: #444;
-}
-
-main p {
-  font-size: 1rem;
+/* Main Content Section */
+.main-content {
+    background-color: #1f5c66;
+    padding: 50px;
+    color: white;
+    font-size: 24px;
+    border-radius: 20px;
+    margin: 10px 0;
 }
 
 /* Footer Section */
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1rem 0;
-  margin-top: 2rem;
-}
-
-footer p {
-  font-size: 0.9rem;
+.footer {
+    background-color: #1f5c66;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
 }
