@@ -1,123 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!-- Declares the document type and sets the language of the webpage -->
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Explore our available courses and learning materials." />
-    <title>Courses</title>
-    <link href="/css/style.css" rel="stylesheet" />
-    <script src="/scripts/javascript.js" defer></script>
+    <meta charset="UTF-8" /> <!-- Sets the character encoding for the document to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures the webpage is responsive on mobile devices -->
+    <meta name="description" content="Explore our available courses and learning materials." /> <!-- Provides a description for search engines (SEO) -->
+    <title>Courses</title> <!-- Specifies the title of the webpage, shown in the browser tab -->
+    <link href="/css/style.css" rel="stylesheet" /> <!-- Links to an external CSS file for styling -->
+    <script src="/scripts/javascript.js" defer></script> <!-- Links to an external JavaScript file, set to load after the HTML -->
 </head>
 <body>
     <!-- Header Section with Logo -->
-    <header role="banner" class="site-header">
-        <h1>Slovenske Vzdelavacie Centrum</h1>
-        <img src="/images/logo.png" alt="Website Logo" class="logo" />
+    <header role="banner" class="site-header"> <!-- Declares the header as a banner role for accessibility and applies a CSS class -->
+        <h1>Slovenske Vzdelavacie Centrum</h1> <!-- Displays the website's title -->
+        <img src="/images/logo.png" alt="Website Logo" class="logo" /> <!-- Displays the site's logo with descriptive alt text -->
     </header>
 
     <!-- Navigation Bar -->
-    <nav aria-label="Main navigation">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="aboutus.html" class="nav-link">About Us</a>
-        <a href="dates.html" class="nav-link">Dates</a>
-        <a href="educationgames.html" class="nav-link">Education Games</a>
-        <a href="members.html" class="nav-link">Members</a>
+    <nav aria-label="Main navigation"> <!-- Declares the navigation bar with an ARIA label for accessibility -->
+        <a href="index.html" class="nav-link">Home</a> <!-- Link to the Home page -->
+        <a href="aboutus.html" class="nav-link">About Us</a> <!-- Link to the About Us page -->
+        <a href="dates.html" class="nav-link">Dates</a> <!-- Link to the Dates page -->
+        <a href="educationgames.html" class="nav-link">Education Games</a> <!-- Link to the Education Games page -->
+        <a href="members.html" class="nav-link">Members</a> <!-- Link to the Members page -->
     </nav>
 
     <!-- Main Content Area -->
-    <main class="mainpage" role="main">
-        <section>
-            <h2>Welcome to Courses</h2>
-            <p>Browse through our extensive selection of courses and find the right one for you.</p>
+    <main class="mainpage" role="main"> <!-- Defines the main content area with a role for accessibility and applies a CSS class -->
+        <section> <!-- Groups related content in a semantic section -->
+            <h2>Welcome to Courses</h2> <!-- Heading for the courses page -->
+            <p>Browse through our extensive selection of courses and find the right one for you.</p> <!-- Short description about the courses -->
         </section>
     </main>
 
     <!-- Additional Content Section -->
-    <section class="content">
-        <h2>More Information</h2>
-        <p>We offer a variety of courses designed to meet your learning needs. Explore the details and get started today!</p>
+    <section class="content"> <!-- Declares a section for additional course-related information -->
+        <h2>More Information</h2> <!-- Heading for more detailed information -->
+        <p>We offer a variety of courses designed to meet your learning needs. Explore the details and get started today!</p> <!-- Encourages users to explore the courses -->
     </section>
 
     <!-- Footer Section -->
-    <footer role="contentinfo" class="site-footer">
-        <p>&copy; 2025 Slovenske Vzdelavacie Centrum. All rights reserved.</p>
+    <footer role="contentinfo" class="site-footer"> <!-- Declares the footer as a contentinfo role for accessibility and applies a CSS class -->
+        <p>&copy; 2025 Slovenske Vzdelavacie Centrum. All rights reserved.</p> <!-- Displays the footer's copyright information -->
     </footer>
 </body>
 </html>
 <style>
     /* Reset default margin and padding for a consistent layout */
 body {
-    font-family: Arial, sans-serif, "Helvetica Neue", Helvetica; /* Sets the default font style with fallbacks */
-    margin: 0;
-    padding: 0;
-    text-align: center; /* Centers text globally */
+    font-family: Arial, sans-serif, "Helvetica Neue", Helvetica; /* Sets the default font style with fallback options */
+    margin: 0; /* Removes default margin from the body */
+    padding: 0; /* Removes default padding from the body */
+    text-align: center; /* Centers text globally across the body */
 }
 
 /* Header Styling */
 header {
-    display: flex; /* Uses flexbox for layout */
-    justify-content: space-between; /* Pushes content to opposite sides */
-    align-items: center; /* Aligns items vertically */
-    padding: 20px;
-    background-color: #F6F4F0; /* Soft light background */
-    border-bottom: 2px solid #4DA1A9; /* Subtle bottom border in teal */
+    display: flex; /* Uses flexbox for flexible layout */
+    justify-content: space-between; /* Positions the title and logo on opposite sides */
+    align-items: center; /* Vertically centers the title and logo */
+    padding: 20px; /* Adds internal spacing to the header */
+    background-color: #F6F4F0; /* Applies a soft light background color */
+    border-bottom: 2px solid #4DA1A9; /* Adds a teal border at the bottom */
 }
 
 /* Logo Styling */
 .logo {
-    max-width: 100px; /* Restricts logo size */
+    max-width: 100px; /* Restricts the maximum width of the logo for scaling */
 }
 
 /* Navigation Bar Styling */
 nav {
-    background-color: #2E5077; /* Dark blue background for contrast */
-    padding: 10px;
+    background-color: #2E5077; /* Applies a dark blue background color for the navbar */
+    padding: 10px; /* Adds internal spacing within the navbar */
 }
 nav a {
-    color: #F6F4F0; /* Soft light text for contrast */
-    text-decoration: none; /* Removes underline from links */
-    margin: 0 10px; /* Adds spacing between links */
-    font-size: 16px; /* Adjust text size */
+    color: #F6F4F0; /* Sets the link text color to soft light for contrast */
+    text-decoration: none; /* Removes the underline from links */
+    margin: 0 10px; /* Adds horizontal spacing between links */
+    font-size: 16px; /* Sets an appropriate font size for the links */
 }
 nav a:hover {
-    color: #79D7BE; /* Changes link color on hover */
+    color: #79D7BE; /* Changes the link text color to light teal on hover */
 }
 
 /* Main Content Section Styling */
 .mainpage {
-    margin-top: 20px; /* Adds spacing above the section */
+    margin-top: 20px; /* Adds a margin above the main content section */
 }
 
 /* Additional Content Section Styling */
 .content {
-    background-color: #79D7BE; /* Light teal background */
-    padding: 20px; /* Add space inside the main section */
-    border-radius: 10px; /* Rounded corners */
-    text-align: center; /* Center text */
-    width: 100%; /* Full width */
-    max-width: 1200px; /* Constrain width for readability on larger screens */
-    margin: 20px auto; /* Center horizontally and add vertical spacing */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    border: 2px solid #2E5077; /* Dark blue-gray border */
+    background-color: #79D7BE; /* Applies a light teal background color */
+    padding: 20px; /* Adds internal spacing within the content section */
+    border-radius: 10px; /* Rounds the corners of the content box */
+    text-align: center; /* Centers the text within the content box */
+    width: 100%; /* Ensures the content section spans the full width */
+    max-width: 1200px; /* Limits the maximum width for readability on large screens */
+    margin: 20px auto; /* Centers the content horizontally and adds vertical spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a floating effect */
+    border: 2px solid #2E5077; /* Adds a dark blue border around the content box */
 }
 .content h2 {
-    color: #2E5077; /* Dark blue-gray color for heading */
-    font-size: 24px; /* Adjust font size */
+    color: #2E5077; /* Sets the heading text color to dark blue */
+    font-size: 24px; /* Adjusts the font size of the heading */
 }
 .content p {
-    color: #4DA1A9; /* Medium teal for paragraph text */
-    font-size: 16px; /* Adjust font size */
-    line-height: 1.5; /* Improve readability */
-    max-width: 80%; /* Limit text width for better readability */
-    margin: 0 auto; /* Center text */
+    color: #4DA1A9; /* Sets the paragraph text color to medium teal */
+    font-size: 16px; /* Adjusts the paragraph font size for readability */
+    line-height: 1.5; /* Increases line height for better readability */
+    max-width: 80%; /* Restricts text width for readability */
+    margin: 0 auto; /* Centers the text horizontally within the content box */
 }
 
 /* Footer Styling */
 footer {
-    background-color: #2E5077; /* Matches nav bar */
-    color: #F6F4F0; /* Soft light text for contrast */
-    padding: 10px;
-    position: relative;
-    font-size: 14px; /* Adjust text size in the footer */
+    background-color: #2E5077; /* Matches the dark blue background of the navbar */
+    color: #F6F4F0; /* Sets the footer text color to soft light for contrast */
+    padding: 10px; /* Adds internal spacing within the footer */
+    position: relative; /* Allows further positional styling if needed */
+    font-size: 14px; /* Sets the font size in the footer */
 }
 </style>
