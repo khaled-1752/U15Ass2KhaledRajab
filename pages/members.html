@@ -31,10 +31,25 @@
         </section>
     </main>
 
-    <!-- Additional Content Section -->
-    <section class="content"> <!-- Declares a section for additional membership-related content -->
-        <h2>Sign Up</h2> <!-- Subheading for the sign-up section -->
-        <p>If you're interested in joining us, please sign up below to support our mission.</p> <!-- Provides a call to action for visitors -->
+    <!-- Sign-Up Form Section -->
+    <section class="content"> <!-- Declares a section for the sign-up form -->
+        <h2>Sign Up</h2> <!-- Subheading for the sign-up form -->
+        <p>If you're interested in joining us, please fill out the form below to become a member and support our mission.</p> <!-- Provides context for the sign-up form -->
+        <form action="/submit_form" method="POST" class="signup-form"> <!-- Creates a form to collect user information -->
+            <label for="name">Full Name:</label> <!-- Label for the Full Name field -->
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required /> <!-- Input field for Full Name -->
+
+            <label for="email">Email Address:</label> <!-- Label for the Email Address field -->
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required /> <!-- Input field for Email -->
+
+            <label for="phone">Phone Number:</label> <!-- Label for the Phone Number field -->
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" /> <!-- Input field for Phone Number -->
+
+            <label for="message">Message (Optional):</label> <!-- Label for the Message field -->
+            <textarea id="message" name="message" placeholder="Share why you'd like to join"></textarea> <!-- Textarea for optional user message -->
+
+            <button type="submit" class="submit-button">Submit</button> <!-- Submit button for the form -->
+        </form>
     </section>
 
     <!-- Footer Section -->
@@ -111,11 +126,37 @@ nav a:hover {
     margin: 0 auto; /* Centers the paragraph text horizontally */
 }
 
-/* Footer Styling */
-footer {
-    background-color: #2E5077; /* Sets the footer background color to match the navbar */
-    color: #F6F4F0; /* Sets the footer text color to soft light for contrast */
-    padding: 10px; /* Adds padding inside the footer */
-    font-size: 14px; /* Adjusts the font size of the footer text */
+/* Form Styling */
+.signup-form {
+    display: flex; /* Uses flexbox for flexible layout */
+    flex-direction: column; /* Stacks form elements vertically */
+    align-items: center; /* Centers the form elements */
+    gap: 15px; /* Adds spacing between form elements */
+    max-width: 600px; /* Limits the maximum width of the form */
+    margin: 20px auto; /* Centers the form horizontally and adds vertical spacing */
 }
+.signup-form label {
+    font-weight: bold; /* Makes labels bold for emphasis */
+    color: #2E5077; /* Matches the heading color */
+}
+.signup-form input,
+.signup-form textarea {
+    width: 100%; /* Makes input fields span the full width of the form */
+    padding: 10px; /* Adds padding inside the fields */
+    border-radius: 5px; /* Rounds the corners */
+    border: 1px solid #4DA1A9; /* Adds a teal border */
+    font-size: 16px; /* Sets the text size */
+}
+.signup-form input:focus,
+.signup-form textarea:focus {
+    outline: none; /* Removes the default focus outline */
+    border: 1px solid #2E5077; /* Changes the border color on focus */
+    box-shadow: 0 0 5px #2E5077; /* Adds a subtle glow effect on focus */
+}
+.signup-form .submit-button {
+    background-color: #2E5077; /* Dark blue background for the button */
+    color: #F6F4F0; /* Light text for contrast */
+    border: none; /* Removes default border */
+    padding: 10px 20px; /* Adds padding inside the button */
+    border-radius: 5px;
 </style>
