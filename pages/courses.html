@@ -3,40 +3,41 @@
 <head>
     <meta charset="UTF-8"> <!-- Sets the character encoding for the document -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper responsive behavior on mobile devices -->
-    <meta name="description" content="Explore our available courses and learning materials.">
+    <meta name="description" content="Explore our available courses and learning materials."> <!-- Adds a meta description for SEO -->
     <title>Courses</title> <!-- Sets the title of the webpage -->
     <link href="./css/style.css" rel="stylesheet"> <!-- Links the external CSS file -->
-    <script src="scripts/javascript.js" defer></script> <!-- Links the external JS file -->
+    <script src="./scripts/javascript.js" defer></script> <!-- Links the external JS file and ensures it runs after the HTML is parsed -->
 </head>
 <body>
     <!-- Header Section with Logo -->
-    <header>
+    <header class="site-header"> <!-- Added a class for better CSS targeting -->
         <h1>Website Header</h1> <!-- Main title of the website -->
-        <img src="./images/logo.png" alt="Logo" class="logo"> <!-- Displays a logo image aligned to the right -->
+        <img src="./images/logo.png" alt="Website Logo" class="logo"> <!-- Descriptive alt text for the logo -->
     </header>
 
     <!-- Navigation Bar -->
-    <nav aria-label="Main navigation">
-            <a href="index.html">Home</a> <!-- Navigation link to the Home page -->
-            <a href="aboutus.html">About Us</a> <!-- Navigation link to the About Us page -->
-            <a href="dates.html">Dates</a> <!-- Navigation link to the Dates page -->
-            <a href="educationgames.html">Education Games</a> <!-- Navigation link to the Education Games page -->
-            <a href="members.html">Members</a> <!-- Navigation link to the Members page -->
+    <nav aria-label="Main navigation"> <!-- Added ARIA label for accessibility -->
+        <a href="index.html" class="nav-link">Home</a> <!-- Navigation link to the Home page -->
+        <a href="aboutus.html" class="nav-link">About Us</a> <!-- Navigation link to the About Us page -->
+        <a href="dates.html" class="nav-link">Dates</a> <!-- Navigation link to the Dates page -->
+        <a href="educationgames.html" class="nav-link">Education Games</a> <!-- Navigation link to the Education Games page -->
+        <a href="members.html" class="nav-link">Members</a> <!-- Navigation link to the Members page -->
     </nav>
 
-    <!-- Main Content Area with Content -->
-    <main class="mainpage">
-        <h2>Welcome to Courses</h2> <!-- Main heading for content section -->
-        <p>This is the main content area where information is displayed.</p> <!-- Short description of the page -->
+    <!-- Main Content Area -->
+    <main class="mainpage" role="main"> <!-- Added a role for better accessibility -->
+        <h2>Welcome to Courses</h2> <!-- Main heading for the content section -->
+        <p>Browse through our extensive selection of courses and find the right one for you.</p> <!-- Updated description to be more meaningful -->
     </main>
 
-    <div class="content">
-        <h1>Content</h1> <!-- Main content section -->
-        <p>This is the main content area where information is displayed.</p> <!-- Short description of the page -->
-    </div>
+    <!-- Additional Content Section -->
+    <section class="content">
+        <h2>More Information</h2> <!-- Updated heading level to maintain semantic hierarchy -->
+        <p>We offer a variety of courses designed to meet your learning needs. Explore the details and get started today!</p> <!-- Enhanced description -->
+    </section>
 
     <!-- Footer Section -->
-    <footer>
+    <footer class="site-footer">
         <p>&copy; 2025 Simple Layout. All rights reserved.</p> <!-- Footer copyright information -->
     </footer>
 </body>
