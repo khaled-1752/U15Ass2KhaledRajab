@@ -1,36 +1,40 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- Specifies the document type and the language of the webpage -->
+<html lang="en"> <!-- Specifies the document type and language -->
 <head>
-    <meta charset="UTF-8" /> <!-- Sets the character encoding for the document to UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures the webpage is responsive on all devices -->
-    <title>Events Dropdown</title> <!-- Sets the title of the webpage -->
-    <link href="/css/style.css" rel="stylesheet" /> <!-- Links the external CSS file for styling -->
-    <script src="/scripts/javascript.js" defer></script> <!-- Links the external JavaScript file -->
+    <!-- Metadata for the webpage -->
+    <meta charset="UTF-8" /> <!-- Sets the character encoding to support all characters -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures the page is responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Improves compatibility with older IE browsers -->
+    <title>Events Dropdown</title> <!-- Sets the title displayed in the browser tab -->
+    <link href="/css/style.css" rel="stylesheet" /> <!-- Links the external CSS file -->
+    <script src="/scripts/javascript.js" defer></script> <!-- Links the external JavaScript file and defers loading -->
 </head>
 <body>
-   <!-- Header Section with Logo -->
-    <header role="banner" class="site-header"> <!-- Defines a banner role for accessibility -->
-        <h1>Slovenske Vzdelavacie Centrum</h1> <!-- Displays the website's main title -->
-        <img src="images/logo.png" alt="Logo" class="logo" /> <!-- Displays the site logo with a descriptive alt text -->
+    <!-- Header Section -->
+    <header role="banner" class="site-header"> <!-- Provides a banner role for accessibility -->
+        <h1>Slovenske Vzdelavacie Centrum</h1> <!-- Displays the main title of the webpage -->
+        <img src="images/logo.png" alt="Logo" class="logo" /> <!-- Displays the logo with descriptive alt text -->
     </header>
-     <nav>
-        <a href="index.html">Homepage</a> <!-- Navigation link to Homepage -->
-        <a href="aboutus.html">About Us</a> <!-- Navigation link to About Us page -->
-        <a href="courses.html">Courses</a> <!-- Navigation link to Courses page -->
-        <a href="dates.html">Dates</a> <!-- Navigation link to Dates page -->
-        <a href="educationgames.html">Education Games</a> <!-- Navigation link to Education Games page -->
-        <a href="members.html">Members</a> <!-- Navigation link to Members page -->
+
+    <!-- Navigation Bar -->
+    <nav role="navigation" class="navbar"> <!-- Provides a navigation role for accessibility -->
+        <a href="index.html">Homepage</a> <!-- Link to Homepage -->
+        <a href="aboutus.html">About Us</a> <!-- Link to About Us -->
+        <a href="courses.html">Courses</a> <!-- Link to Courses -->
+        <a href="dates.html">Dates</a> <!-- Link to Dates -->
+        <a href="educationgames.html">Education Games</a> <!-- Link to Education Games -->
+        <a href="members.html">Members</a> <!-- Link to Members -->
     </nav>
 
     <!-- Main Content Section -->
-    <main>
-        <h2>Our Events</h2>
-        <p>Select an event from the dropdown menu and click "Enroll" to join us!</p>
-
-        <!-- Dropdown Menu for Events -->
-        <div class="dropdown-container">
-            <label for="events">Choose an event:</label>
-            <select id="events" name="events">
+    <main> <!-- Main section for primary content -->
+        <h2>Our Events</h2> <!-- Secondary heading for the page -->
+        <p>Select an event from the dropdown menu and click "Enroll" to join us!</p> <!-- Instructional text -->
+        
+        <!-- Dropdown Menu Container -->
+        <div class="dropdown-container"> <!-- Wraps the dropdown menu for styling -->
+            <label for="events">Choose an event:</label> <!-- Label for accessibility -->
+            <select id="events" name="events" aria-label="Event selection"> <!-- Dropdown menu for event selection -->
                 <option value="tree-planting">Tree Planting Drive - 10th June 2025</option>
                 <option value="food-donation">Food Donation Camp - 15th July 2025</option>
                 <option value="charity-run">Charity Fun Run - 20th August 2025</option>
@@ -40,86 +44,14 @@
         </div>
 
         <!-- Enroll Button -->
-        <button class="enroll-button" onclick="location.href='signup.html'">Enroll</button>
+        <button class="enroll-button" onclick="location.href='signup.html'" aria-label="Enroll in event">
+            Enroll <!-- Text for the button -->
+        </button>
     </main>
 
     <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 Slovenske Vzdelavacie Centrum. All rights reserved.</p>
+    <footer> <!-- Footer area for copyright information -->
+        <p>&copy; 2025 Slovenske Vzdelavacie Centrum. All rights reserved.</p> <!-- Copyright text -->
     </footer>
 </body>
 </html>
-<style>
-    /* Reset default margin and padding for a consistent layout */
-body {
-    font-family: Arial, sans-serif; /* Sets the default font style */
-    margin: 0;
-    padding: 0;
-    text-align: center; /* Centers text globally */
-} 
-/* Header Styling */
-header {
-    display: flex; /* Uses flexbox for layout */
-    justify-content: space-between; /* Pushes content to opposite sides */
-    align-items: center; /* Aligns items vertically */
-    padding: 20px;
-    background-color: #F6F4F0; /* Soft light background */
-    border-bottom: 2px solid #4DA1A9; /* Subtle bottom border in teal */
-} 
-/* Logo Styling */
-.logo {
-    max-width: 100px; /* Restricts logo size */
-} 
-/* Navigation Bar Styling */
-nav {
-    background-color: #2E5077; /* Dark blue background for contrast */
-    padding: 10px;
-}
-nav a {
-    color: #F6F4F0; /* Soft light text for contrast */
-    text-decoration: none; /* Removes underline from links */
-    margin: 0 10px; /* Adds spacing between links */
-} 
-/* Main Content Section Styling */
-.content {
-    background-color: #79D7BE; /* Light teal background */
-    padding: 20px; /* Add space inside the main section */
-    border-radius: 10px; /* Rounded corners */
-    text-align: center; /* Center text */
-    width: 100%; /* Full width */
-    max-width: 100%; /* Ensure it doesn't exceed the viewport */
-    margin: 0 auto; /* Center horizontally */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    border: 2px solid #2E5077; /* Dark blue-gray border */
-}
-.content h2 {
-    color: #2E5077; /* Dark blue-gray color for heading */
-    font-size: 24px; /* Adjust font size */
-}
-.content p {
-    color: #4DA1A9; /* Medium teal for paragraph text */
-    font-size: 16px; /* Adjust font size */
-    line-height: 1.5; /* Improve readability */
-    max-width: 80%; /* Limit text width for better readability */
-    margin: 0 auto; /* Center text */
-}
-.sections {
-    display: flex; /* Enables side-by-side layout */
-    justify-content: space-around; /* Spaces sections evenly */
-    padding: 20px;
-}
-/* Individual Section Styling */
-.section {
-    width: 45%; /* Sets equal width for both sections */
-    padding: 20px;
-    border: 1px solid #4DA1A9; /* Subtle border in teal */
-    background-color: #F6F4F0; /* Soft light background for readability */
-}
-/* Footer Styling */
-footer {
-    background-color: #2E5077; /* Matches nav bar */
-    color: #F6F4F0; /* Soft light text for contrast */
-    padding: 10px;
-    position: relative;
-}
- </style>
