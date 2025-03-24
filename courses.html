@@ -7,94 +7,12 @@
     <title>Courses</title> <!-- Specifies the title of the webpage, shown in the browser tab -->
     <link href="/css/style.css" rel="stylesheet" /> <!-- Links to an external CSS file for styling -->
     <script src="/scripts/javascript.js" defer></script> <!-- Links to an external JavaScript file, set to load after the HTML -->
-    <style>
-        /* Reset default margin and padding for a consistent layout */
-        body {
-            font-family: Arial, sans-serif, "Helvetica Neue", Helvetica; /* Sets the default font style with fallback options */
-            margin: 0; /* Removes default margin from the body */
-            padding: 0; /* Removes default padding from the body */
-            text-align: center; /* Centers text globally across the body */
-        }
-
-        /* Header Styling */
-        header {
-            display: flex; /* Uses flexbox for flexible layout */
-            justify-content: space-between; /* Positions the title and logo on opposite sides */
-            align-items: center; /* Vertically centers the title and logo */
-            padding: 20px; /* Adds internal spacing to the header */
-            background-color: #F6F4F0; /* Applies a soft light background color */
-            border-bottom: 2px solid #4DA1A9; /* Adds a teal border at the bottom */
-        }
-
-        /* Logo Styling */
-        .logo {
-            max-width: 100px; /* Restricts the maximum width of the logo for scaling */
-        }
-
-        /* Navigation Bar Styling */
-        nav {
-            display: flex; /* Enables flexbox layout for navigation links */
-            flex-wrap: wrap; /* Ensures links wrap on smaller screens */
-            justify-content: center; /* Centers links horizontally */
-            background-color: #2E5077; /* Applies a dark blue background color for the navbar */
-            padding: 15px; /* Adds internal spacing within the navbar */
-        }
-        nav a {
-            color: #F6F4F0; /* Sets the link text color to soft light for contrast */
-            text-decoration: none; /* Removes the underline from links */
-            margin: 0 15px; /* Adds horizontal spacing between navigation links */
-            font-size: 16px; /* Sets an appropriate font size for the links */
-        }
-        nav a:hover {
-            color: #79D7BE; /* Changes the link text color to light teal on hover */
-        }
-
-        /* Main Content Section Styling */
-        .mainpage {
-            margin-top: 20px; /* Adds a margin above the main content section */
-        }
-
-        /* Additional Content Section Styling */
-        .content {
-            background-color: #79D7BE; /* Applies a light teal background color */
-            padding: 20px; /* Adds internal spacing within the content section */
-            border-radius: 10px; /* Rounds the corners of the content box */
-            text-align: center; /* Centers the text within the content box */
-            width: 100%; /* Ensures the content section spans the full width */
-            max-width: 1200px; /* Limits the maximum width for readability on large screens */
-            margin: 20px auto; /* Centers the content horizontally and adds vertical spacing */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a floating effect */
-            border: 2px solid #2E5077; /* Adds a dark blue border around the content box */
-        }
-        .content h2 {
-            color: #2E5077; /* Sets the heading text color to dark blue */
-            font-size: 24px; /* Adjusts the font size of the heading */
-        }
-        .content p {
-            color: #4DA1A9; /* Sets the paragraph text color to medium teal */
-            font-size: 16px; /* Adjusts the paragraph font size for readability */
-            line-height: 1.5; /* Increases line height for better readability */
-            max-width: 80%; /* Restricts text width for readability */
-            margin: 0 auto; /* Centers the text horizontally within the content box */
-        }
-
-        /* Footer Styling */
-        footer {
-            background-color: #2E5077; /* Matches the dark blue background of the navbar */
-            color: #F6F4F0; /* Sets the footer text color to soft light for contrast */
-            padding: 10px 20px; /* Adds internal spacing within the footer */
-            font-size: 14px; /* Sets the font size for the footer */
-        }
-        footer p {
-            margin: 0; /* Removes default margin for the footer text */
-        }
-    </style>
 </head>
 <body>
     <!-- Header Section with Logo -->
-    <header role="banner" class="site-header"> <!-- Declares the header as a banner role for accessibility -->
+    <header>
         <h1>Slovenske Vzdelavacie Centrum</h1> <!-- Displays the website's title -->
-        <img src="/images/logo.png" alt="Website Logo" class="logo" /> <!-- Displays the site's logo with descriptive alt text -->
+        <img src="/images/logo.png" alt="Website Logo" class="logo" /> <!-- Displays the logo -->
     </header>
 
     <!-- Navigation Bar -->
@@ -107,23 +25,39 @@
         <a href="members.html">Members</a>
     </nav>
 
-    <!-- Main Content Area -->
-    <main class="mainpage" role="main"> <!-- Defines the main content area with a role for accessibility -->
-        <section> <!-- Groups related content in a semantic section -->
-            <h2>Welcome to Courses</h2> <!-- Heading for the courses page -->
-            <p>Browse through our extensive selection of courses and find the right one for you.</p> <!-- Short description about the courses -->
-        </section>
+    <!-- Main Content Section -->
+    <main>
+        <h2>Our Interactive Courses</h2>
+        <p>Browse through our interactive courses designed to make learning fun and engaging for everyone.</p>
+
+        <!-- Interactive Courses Section -->
+        <div class="courses">
+            <!-- Course 1 -->
+            <div class="course-card">
+                <h3>Basic Programming</h3>
+                <p>Learn the fundamentals of programming with hands-on exercises and projects.</p>
+                <button onclick="alert('You have enrolled in Basic Programming!')">Enroll Now</button>
+            </div>
+
+            <!-- Course 2 -->
+            <div class="course-card">
+                <h3>Web Development</h3>
+                <p>Build stunning websites from scratch using HTML, CSS, and JavaScript.</p>
+                <button onclick="alert('You have enrolled in Web Development!')">Enroll Now</button>
+            </div>
+
+            <!-- Course 3 -->
+            <div class="course-card">
+                <h3>Data Analysis</h3>
+                <p>Master data visualization and analysis using tools like Python and Excel.</p>
+                <button onclick="alert('You have enrolled in Data Analysis!')">Enroll Now</button>
+            </div>
+        </div>
     </main>
 
-    <!-- Additional Content Section -->
-    <section class="content" role="complementary"> <!-- Declares a section for additional course-related information -->
-        <h2>More Information</h2> <!-- Heading for more detailed information -->
-        <p>We offer a variety of courses designed to meet your learning needs. Explore the details and get started today!</p> <!-- Encourages users to explore the courses -->
-    </section>
-
     <!-- Footer Section -->
-    <footer role="contentinfo" class="site-footer"> <!-- Declares the footer as a contentinfo role for accessibility -->
-        <p>&copy; 2025 Slovenske Vzdelavacie Centrum. All rights reserved.</p> <!-- Displays the footer's copyright information -->
+    <footer>
+        <p>&copy; 2025 Slovenske Vzdelavacie Centrum. All rights reserved.</p>
     </footer>
 </body>
 </html>
