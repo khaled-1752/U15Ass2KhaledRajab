@@ -1,1 +1,176 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Specifies the document type and the language of the webpage -->
+<head>
+    <meta charset="UTF-8" /> <!-- Sets the character encoding for the document to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures the webpage is responsive on all devices -->
+    <title>Event Sign-Up Form</title> <!-- Sets the title of the webpage -->
+    <link href="/css/style.css" rel="stylesheet" /> <!-- Links an external CSS file for styling -->
+    <style>
+        /* Reset and Default Styling */
+        body {
+            font-family: Arial, sans-serif; /* Sets the default font style */
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Centers text globally */
+            background-color: #f9f9f9; /* Light background for better readability */
+        }
 
+        /* Form Container Styling */
+        .form-container {
+            background-color: #ffffff; /* White background for the form */
+            width: 100%;
+            max-width: 500px; /* Restricts the maximum width of the form */
+            margin: 50px auto; /* Centers the form */
+            padding: 20px;
+            border: 1px solid #ddd; /* Adds a subtle border */
+            border-radius: 10px; /* Rounds the corners of the form */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+        }
+        h2 {
+            color: #2E5077; /* Sets the heading text color */
+            margin-bottom: 20px;
+        }
+        label {
+            display: block; /* Ensures labels are block-level for proper alignment */
+            text-align: left;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #4DA1A9; /* Teal color for labels */
+        }
+        input, select, textarea, button {
+            width: 100%; /* Makes the input fields and buttons span the full width */
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd; /* Adds a subtle border */
+            border-radius: 5px; /* Rounds the corners */
+            font-size: 14px;
+            font-family: inherit; /* Inherits font style from parent */
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none; /* Removes the default focus outline */
+            border-color: #2E5077; /* Changes the border color when focused */
+            box-shadow: 0 0 5px #2E5077; /* Adds a subtle glow when focused */
+        }
+        button {
+            background-color: #2E5077; /* Sets the background color of the button */
+            color: #fff; /* Sets the text color to white */
+            border: none; /* Removes the default button border */
+            cursor: pointer; /* Changes cursor to pointer on hover */
+        }
+        button:hover {
+            background-color: #4DA1A9; /* Changes button color on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Form Container -->
+    <div class="form-container">
+        <h2>Sign Up for an Event</h2> <!-- Main heading for the form -->
+        <form action="/submit_form" method="POST"> <!-- Submits form data to a server -->
+            <!-- Name Field -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+
+            <!-- Email Field -->
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required />
+
+            <!-- Phone Field -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" />
+
+            <!-- Event Dropdown -->
+            <label for="event">Select an Event:</label>
+            <select id="event" name="event" required>
+                <option value="">-- Choose an event --</option>
+                <option value="tree-planting">Tree Planting Drive</option>
+                <option value="food-donation">Food Donation Camp</option>
+                <option value="charity-run">Charity Fun Run</option>
+                <option value="volunteer-workshop">Workshop on Volunteering</option>
+                <option value="fundraising-gala">Fundraising Gala</option>
+            </select>
+
+            <!-- Additional Comments -->
+            <label for="comments">Comments (Optional):</label>
+            <textarea id="comments" name="comments" placeholder="Add any additional comments or requests" rows="4"></textarea>
+
+            <!-- Submit Button -->
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</body>
+</html>
+<style>
+  /* Reset default margin and padding for a consistent layout */
+body {
+    font-family: Arial, sans-serif; /* Sets the default font style */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centers text globally */
+} 
+/* Header Styling */
+header {
+    display: flex; /* Uses flexbox for layout */
+    justify-content: space-between; /* Pushes content to opposite sides */
+    align-items: center; /* Aligns items vertically */
+    padding: 20px;
+    background-color: #F6F4F0; /* Soft light background */
+    border-bottom: 2px solid #4DA1A9; /* Subtle bottom border in teal */
+} 
+/* Logo Styling */
+.logo {
+    max-width: 100px; /* Restricts logo size */
+} 
+/* Navigation Bar Styling */
+nav {
+    background-color: #2E5077; /* Dark blue background for contrast */
+    padding: 10px;
+}
+nav a {
+    color: #F6F4F0; /* Soft light text for contrast */
+    text-decoration: none; /* Removes underline from links */
+    margin: 0 10px; /* Adds spacing between links */
+} 
+/* Main Content Section Styling */
+.content {
+    background-color: #79D7BE; /* Light teal background */
+    padding: 20px; /* Add space inside the main section */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center text */
+    width: 100%; /* Full width */
+    max-width: 100%; /* Ensure it doesn't exceed the viewport */
+    margin: 0 auto; /* Center horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border: 2px solid #2E5077; /* Dark blue-gray border */
+}
+.content h2 {
+    color: #2E5077; /* Dark blue-gray color for heading */
+    font-size: 24px; /* Adjust font size */
+}
+.content p {
+    color: #4DA1A9; /* Medium teal for paragraph text */
+    font-size: 16px; /* Adjust font size */
+    line-height: 1.5; /* Improve readability */
+    max-width: 80%; /* Limit text width for better readability */
+    margin: 0 auto; /* Center text */
+}
+.sections {
+    display: flex; /* Enables side-by-side layout */
+    justify-content: space-around; /* Spaces sections evenly */
+    padding: 20px;
+}
+/* Individual Section Styling */
+.section {
+    width: 45%; /* Sets equal width for both sections */
+    padding: 20px;
+    border: 1px solid #4DA1A9; /* Subtle border in teal */
+    background-color: #F6F4F0; /* Soft light background for readability */
+}
+/* Footer Styling */
+footer {
+    background-color: #2E5077; /* Matches nav bar */
+    color: #F6F4F0; /* Soft light text for contrast */
+    padding: 10px;
+    position: relative;
+}
+</style>
