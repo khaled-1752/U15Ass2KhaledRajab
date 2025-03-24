@@ -3,76 +3,53 @@
 <head>
     <meta charset="UTF-8" /> <!-- Sets the character encoding to UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures the webpage is responsive on all devices -->
-    <title>Membership</title> <!-- Specifies the title of the webpage shown on the browser tab -->
-    <link href="/css/style.css" rel="stylesheet" /> <!-- Links an external CSS file for the webpage's styles -->
-    <script src="/scripts/javascript.js" defer></script> <!-- Links an external JavaScript file and ensures it executes after the HTML is parsed -->
+    <title>Vertical Registration Form</title> <!-- Specifies the title of the webpage -->
 </head>
 <body>
-  <!-- Header Section with Logo -->
-    <header role="banner" class="site-header"> <!-- Defines a banner role for accessibility -->
-        <h1>Slovenske Vzdelavacie Centrum</h1> <!-- Displays the website's main title -->
-        <img src="images/logo.png" alt="Logo" class="logo" /> <!-- Displays the site logo with a descriptive alt text -->
+    <!-- Header Section -->
+    <header role="banner" class="site-header">
+        <h1>Slovenske Vzdelavacie Centrum</h1> <!-- Displays website title -->
+        <img src="images/logo.png" alt="Logo" class="logo" /> <!-- Displays website logo -->
     </header>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="index.html">Homepage</a>
-        <a href="aboutus.html">About Us</a>
-        <a href="courses.html">Courses</a>
-        <a href="dates.html">Dates</a>
-        <a href="educationgames.html">Education Games</a>
-        <a href="members.html">Members</a>
-    </nav>
+    <!-- Vertical Registration Form -->
+    <div class="form-container">
+        <form action="/submit_registration" method="POST"> <!-- Form submission -->
+            <!-- Full Name -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required />
 
-    <!-- Main Content Section -->
-    <main class="mainpage" role="main"> <!-- Declares the main section with a role for accessibility -->
-        <section> <!-- Groups related content into a semantic section -->
-            <h2>Welcome to Our Membership</h2> <!-- Heading for the membership section -->
-            <p>Become a part of our community by signing up as a member.</p> <!-- Description of the membership -->
-        </section>
-    </main>
+            <!-- Email -->
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required />
 
-<!-- Sign-Up Form Section -->
-<section class="content" role="form"> <!-- Declares the section for the sign-up form with a semantic role -->
-    <h2>Sign Up</h2> <!-- Subheading for the sign-up form -->
-    <p>If you're interested in joining us, please fill out the form below to become a member and support our mission.</p> <!-- Context for the form -->
-    <form action="/submit_form" method="POST" class="signup-form" aria-label="Membership Sign-up"> <!-- Starts the sign-up form -->
-        <fieldset> <!-- Groups form fields for better structure -->
-            <legend>Membership Information</legend> <!-- Describes the purpose of the form -->
-            
-            <!-- Name Input Field -->
-            <label for="name">Full Name:</label> <!-- Label for the Name input -->
-            <input type="text" id="name" name="name" placeholder="Enter your full name" required aria-label="Full Name" /> <!-- Text input for Name -->
+            <!-- Phone -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" />
 
-            <!-- Email Input Field -->
-            <label for="email">Email Address:</label> <!-- Label for the Email input -->
-            <input type="email" id="email" name="email" placeholder="Enter your email address" required aria-label="Email Address" /> <!-- Email input -->
-
-            <!-- Phone Number Input Field -->
-            <label for="phone">Phone Number:</label> <!-- Label for the Phone Number input -->
-            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" aria-label="Phone Number" /> <!-- Phone number input -->
-
-            <!-- Message Textarea -->
-            <label for="message">Message (Optional):</label> <!-- Label for the Message field -->
-            <textarea id="message" name="message" placeholder="Share why you'd like to join" aria-label="Optional Message"></textarea> <!-- Textarea for optional user message -->
-
-            <!-- Membership Type Dropdown -->
-            <label for="membership-type">Membership Type:</label> <!-- Label for Membership Type dropdown -->
-            <select id="membership-type" name="membership-type" required aria-label="Membership Type"> <!-- Dropdown selection -->
-                <option value="">Select a membership type</option>
-                <option value="student">Student</option>
-                <option value="professional">Professional</option>
-                <option value="supporter">Supporter</option>
+            <!-- Event Selection -->
+            <label for="event">Choose an Event:</label>
+            <select id="event" name="event" required>
+                <option value="">Select an event</option>
+                <option value="tree-planting">Tree Planting Drive</option>
+                <option value="charity-run">Charity Fun Run</option>
+                <option value="food-donation">Food Donation Camp</option>
+                <option value="volunteer-workshop">Workshop on Volunteering</option>
+                <option value="fundraising-gala">Fundraising Gala</option>
             </select>
 
-            <!-- Submit Button -->
-            <button type="submit" class="submit-button">Submit</button> <!-- Button for submitting the form -->
-        </fieldset>
-    </form>
-</section>
+            <!-- Comments -->
+            <label for="comments">Comments (Optional):</label>
+            <textarea id="comments" name="comments" placeholder="Any additional details..." rows="4"></textarea>
 
-        <style>
-            /* Reset default margin and padding for a consistent layout */
+            <!-- Submit Button -->
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
+<style>
+    /* Reset default margin and padding for a consistent layout */
 body {
     font-family: Arial, sans-serif; /* Sets the default font style */
     margin: 0;
@@ -144,4 +121,4 @@ footer {
     padding: 10px;
     position: relative;
 }
-        </style>
+</style>
