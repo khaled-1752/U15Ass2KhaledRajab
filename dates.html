@@ -1,51 +1,43 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- Specifies the document type and sets the language of the webpage -->
+<html lang="en"> <!-- Specifies the document type and the language of the webpage -->
 <head>
-    <meta charset="UTF-8" /> <!-- Sets the character encoding for the document to UTF-8 for proper text rendering -->
+    <meta charset="UTF-8" /> <!-- Sets the character encoding for the document to UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures the webpage is responsive on all devices -->
-    <title>Events Menu</title> <!-- Specifies the title of the webpage displayed in the browser tab -->
-    <link href="/css/style.css" rel="stylesheet" /> <!-- Links an external CSS file for styling the webpage -->
-    <script src="/scripts/javascript.js" defer></script> <!-- Links an external JavaScript file and defers loading until the HTML is parsed -->
+    <title>Events Dropdown</title> <!-- Sets the title of the webpage -->
+    <link href="/css/style.css" rel="stylesheet" /> <!-- Links the external CSS file for styling -->
+    <script src="/scripts/javascript.js" defer></script> <!-- Links the external JavaScript file -->
 </head>
 <body>
     <!-- Header Section -->
     <header>
-        <h1>Slovenske Vzdelavacie Centrum</h1> <!-- Displays the main title of the webpage -->
-        <img src="/images/logo.png" alt="Website Logo" class="logo" /> <!-- Displays the website's logo with descriptive alt text -->
+        <h1>Slovenske Vzdelavacie Centrum</h1> <!-- Displays the website title -->
+        <img src="/images/logo.png" alt="Website Logo" class="logo" /> <!-- Displays the logo -->
     </header>
-
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="index.html">Homepage</a> <!-- Link to the Homepage -->
-        <a href="aboutus.html">About Us</a> <!-- Link to the About Us page -->
-        <a href="courses.html">Courses</a> <!-- Link to the Courses page -->
-        <a href="dates.html">Dates</a> <!-- Link to the Dates page -->
-        <a href="educationgames.html">Education Games</a> <!-- Link to the Education Games page -->
-        <a href="members.html">Members</a> <!-- Link to the Members page -->
-    </nav>
 
     <!-- Main Content Section -->
     <main>
-        <h2>Our Upcoming Events</h2> <!-- Main heading for the events section -->
-        <p>Discover our exciting events and enroll to participate!</p> <!-- Introduction to the events section -->
+        <h2>Our Events</h2>
+        <p>Select an event from the dropdown menu and click "Enroll" to join us!</p>
 
-        <!-- Events Menu -->
-        <div class="events-menu">
-            <h2>Events</h2> <!-- Heading for the events menu -->
-            <ul> <!-- List of events -->
-                <li><strong>Tree Planting Drive</strong> - 10th June 2025</li> <!-- Event 1 with date and description -->
-                <li><strong>Food Donation Camp</strong> - 15th July 2025</li> <!-- Event 2 with date and description -->
-                <li><strong>Charity Fun Run</strong> - 20th August 2025</li> <!-- Event 3 with date and description -->
-                <li><strong>Workshop on Volunteering</strong> - 5th September 2025</li> <!-- Event 4 with date and description -->
-                <li><strong>Fundraising Gala</strong> - 10th October 2025</li> <!-- Event 5 with date and description -->
-            </ul>
-            <button class="enroll-button" onclick="location.href='members.html'">Enroll</button> <!-- Single enroll button that redirects users to the Members page -->
+        <!-- Dropdown Menu for Events -->
+        <div class="dropdown-container">
+            <label for="events">Choose an event:</label>
+            <select id="events" name="events">
+                <option value="tree-planting">Tree Planting Drive - 10th June 2025</option>
+                <option value="food-donation">Food Donation Camp - 15th July 2025</option>
+                <option value="charity-run">Charity Fun Run - 20th August 2025</option>
+                <option value="volunteer-workshop">Workshop on Volunteering - 5th September 2025</option>
+                <option value="fundraising-gala">Fundraising Gala - 10th October 2025</option>
+            </select>
         </div>
+
+        <!-- Enroll Button -->
+        <button class="enroll-button" onclick="location.href='members.html'">Enroll</button>
     </main>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Slovenske Vzdelavacie Centrum. All rights reserved.</p> <!-- Footer copyright -->
+        <p>&copy; 2025 Slovenske Vzdelavacie Centrum. All rights reserved.</p>
     </footer>
 </body>
 </html>
