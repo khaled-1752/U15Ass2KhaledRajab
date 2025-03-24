@@ -3,52 +3,61 @@
 <head>
     <meta charset="UTF-8" /> <!-- Sets the character encoding for the document to UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures the webpage is responsive on all devices -->
-    <title>Events Dropdown</title> <!-- Sets the title of the webpage -->
-    <link href="/css/style.css" rel="stylesheet" /> <!-- Links the external CSS file for styling -->
-    <script src="/scripts/javascript.js" defer></script> <!-- Links the external JavaScript file -->
+    <title>Event Sign-Up Form</title> <!-- Sets the title of the webpage -->
+    <link href="/css/style.css" rel="stylesheet" /> <!-- Links an external CSS file for styling -->
 </head>
 <body>
     <!-- Header Section -->
     <header>
-        <h1>Slovenske Vzdelavacie Centrum</h1> <!-- Displays the website title -->
-        <img src="/images/logo.png" alt="Website Logo" class="logo" /> <!-- Displays the logo -->
+        <img src="/images/logo.png" alt="Slovenske Vzdelavacie Centrum Logo" class="logo" /> <!-- Website logo -->
+        <h1 class="header-title">Slovenske Vzdelavacie Centrum</h1> <!-- Website title -->
     </header>
 
-         <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
     <nav>
-        <a href="index.html">Homepage</a>
-        <a href="aboutus.html">About Us</a>
-        <a href="courses.html">Courses</a>
-        <a href="dates.html">Dates</a>
-        <a href="educationgames.html">Education Games</a>
-        <a href="members.html">Members</a>
+        <a href="index.html">Homepage</a> <!-- Navigation link to Homepage -->
+        <a href="aboutus.html">About Us</a> <!-- Navigation link to About Us page -->
+        <a href="courses.html">Courses</a> <!-- Navigation link to Courses page -->
+        <a href="dates.html">Dates</a> <!-- Navigation link to Dates page -->
+        <a href="educationgames.html">Education Games</a> <!-- Navigation link to Education Games page -->
+        <a href="members.html">Members</a> <!-- Navigation link to Members page -->
     </nav>
-    
-    <!-- Main Content Section -->
-    <main>
-        <h2>Our Events</h2>
-        <p>Select an event from the dropdown menu and click "Enroll" to join us!</p>
 
-        <!-- Dropdown Menu for Events -->
-        <div class="dropdown-container">
-            <label for="events">Choose an event:</label>
-            <select id="events" name="events">
-                <option value="tree-planting">Tree Planting Drive - 10th June 2025</option>
-                <option value="food-donation">Food Donation Camp - 15th July 2025</option>
-                <option value="charity-run">Charity Fun Run - 20th August 2025</option>
-                <option value="volunteer-workshop">Workshop on Volunteering - 5th September 2025</option>
-                <option value="fundraising-gala">Fundraising Gala - 10th October 2025</option>
+    <!-- Form Container -->
+    <div class="form-container">
+        <h2>Sign Up for an Event</h2> <!-- Main heading for the form -->
+        <form action="/submit_form" method="POST"> <!-- Form submission -->
+            <!-- Name Input -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+
+            <!-- Email Input -->
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required />
+
+            <!-- Phone Input -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" />
+
+            <!-- Event Dropdown -->
+            <label for="event">Select an Event:</label>
+            <select id="event" name="event" required>
+                <option value="">-- Choose an event --</option>
+                <option value="tree-planting">Tree Planting Drive</option>
+                <option value="food-donation">Food Donation Camp</option>
+                <option value="charity-run">Charity Fun Run</option>
+                <option value="volunteer-workshop">Workshop on Volunteering</option>
+                <option value="fundraising-gala">Fundraising Gala</option>
             </select>
-        </div>
 
-        <!-- Enroll Button -->
-        <button class="enroll-button" onclick="location.href='signup.html'">Enroll</button>
-    </main>
+            <!-- Comments Section -->
+            <label for="comments">Comments (Optional):</label>
+            <textarea id="comments" name="comments" placeholder="Add any additional comments or requests" rows="4"></textarea>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 Slovenske Vzdelavacie Centrum. All rights reserved.</p>
-    </footer>
+            <!-- Submit Button -->
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
 </body>
 </html>
 <style>
