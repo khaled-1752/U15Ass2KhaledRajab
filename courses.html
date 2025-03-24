@@ -36,21 +36,21 @@
             <div class="course-card">
                 <h3>Fundraising 101</h3>
                 <p>Discover effective strategies for organizing successful fundraisers and engaging donors.</p>
-                <button onclick="alert('You have enrolled in Fundraising 101!')">Enroll Now</button>
+                <button onclick="window.location.href='signup.html'">Enroll Now</button>
             </div>
 
             <!-- Course 2 -->
             <div class="course-card">
                 <h3>Volunteer Management</h3>
                 <p>Learn how to recruit, train, and inspire volunteers to create impactful change.</p>
-                <button onclick="alert('You have enrolled in Volunteer Management!')">Enroll Now</button>
+                <button onclick="window.location.href='signup.html'">Enroll Now</button>
             </div>
 
             <!-- Course 3 -->
             <div class="course-card">
                 <h3>Social Impact Measurement</h3>
                 <p>Gain the skills to assess and communicate the impact of your charitable initiatives.</p>
-                <button onclick="alert('You have enrolled in Social Impact Measurement!')">Enroll Now</button>
+                <button onclick="window.location.href='signup.html'">Enroll Now</button>
             </div>
         </div>
     </main>
@@ -62,12 +62,13 @@
 </body>
 </html>
 <style>
-    /* Reset default margin and padding for a consistent layout */
+/* Reset default margin and padding for a consistent layout */
 body {
     font-family: Arial, sans-serif; /* Sets the default font style */
     margin: 0;
     padding: 0;
     text-align: center; /* Centers text globally */
+    color: black; /* Sets the default font color to black */
 } 
 /* Header Styling */
 header {
@@ -93,14 +94,46 @@ nav a {
     margin: 0 10px; /* Adds spacing between links */
 } 
 /* Main Content Section Styling */
-.content {
+.mainpage {
+    padding: 20px;
+    text-align: left; /* Align text to the left for better readability */
+}
+.mainpage section {
     background-color: #79D7BE; /* Light teal background */
     padding: 20px; /* Add space inside the main section */
     border-radius: 10px; /* Rounded corners */
-    text-align: center; /* Center text */
-    width: 100%; /* Full width */
-    max-width: 100%; /* Ensure it doesn't exceed the viewport */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border: 2px solid #2E5077; /* Dark blue-gray border */
+    width: 80%; /* Limit section width for better readability */
     margin: 0 auto; /* Center horizontally */
+}
+.mainpage section h2 {
+    color: #2E5077; /* Dark blue-gray color for heading */
+    font-size: 24px; /* Adjust font size */
+}
+.mainpage section p {
+    color: black; /* Sets the paragraph text color to black */
+    font-size: 16px; /* Adjust font size */
+    line-height: 1.5; /* Improve readability */
+}
+.about-img {
+    width: 100%; /* Make images responsive */
+    max-width: 600px; /* Set a maximum width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px 0; /* Add margin above and below images */
+    border-radius: 10px; /* Rounded corners for images */
+}
+.about-section {
+    text-align: center; /* Center text in the about section */
+}
+/* Additional Content Section Styling */
+.content {
+    background-color: #79D7BE; /* Light teal background */
+    padding: 20px; /* Add space inside the section */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center text */
+    width: 80%; /* Limit section width for better readability */
+    margin: 20px auto; /* Center horizontally with some margin */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
     border: 2px solid #2E5077; /* Dark blue-gray border */
 }
@@ -109,23 +142,11 @@ nav a {
     font-size: 24px; /* Adjust font size */
 }
 .content p {
-    color: #4DA1A9; /* Medium teal for paragraph text */
+    color: black; /* Sets the paragraph text color to black */
     font-size: 16px; /* Adjust font size */
     line-height: 1.5; /* Improve readability */
     max-width: 80%; /* Limit text width for better readability */
     margin: 0 auto; /* Center text */
-}
-.sections {
-    display: flex; /* Enables side-by-side layout */
-    justify-content: space-around; /* Spaces sections evenly */
-    padding: 20px;
-}
-/* Individual Section Styling */
-.section {
-    width: 45%; /* Sets equal width for both sections */
-    padding: 20px;
-    border: 1px solid #4DA1A9; /* Subtle border in teal */
-    background-color: #F6F4F0; /* Soft light background for readability */
 }
 /* Footer Styling */
 footer {
@@ -133,5 +154,6 @@ footer {
     color: #F6F4F0; /* Soft light text for contrast */
     padding: 10px;
     position: relative;
+    text-align: center; /* Center text in the footer */
 }
 </style>
