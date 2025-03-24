@@ -1,99 +1,17 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- Specifies the document type and the language of the webpage -->
+<html lang="en"> <!-- Specifies the document type and sets the language of the webpage -->
 <head>
     <meta charset="UTF-8" /> <!-- Sets the character encoding for the document to UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures the webpage is responsive on all screen sizes -->
     <title>Dates</title> <!-- Sets the title of the webpage displayed in the browser tab -->
     <link href="/css/style.css" rel="stylesheet" /> <!-- Links the external CSS file for styling -->
     <script src="/scripts/javascript.js" defer></script> <!-- Links the external JavaScript file and ensures it runs after the HTML is parsed -->
-    <style>
-        /* Reset default margin and padding for a consistent layout */
-        body {
-            font-family: Arial, sans-serif, "Helvetica Neue", Helvetica; /* Sets the default font style with fallback options */
-            margin: 0; /* Removes default margin from the body */
-            padding: 0; /* Removes default padding from the body */
-            text-align: center; /* Centers text within the body */
-        }
-
-        /* Header Styling */
-        header {
-            display: flex; /* Enables flexbox layout for the header */
-            justify-content: space-between; /* Aligns the title and logo at opposite ends */
-            align-items: center; /* Vertically aligns the title and logo */
-            padding: 20px; /* Adds padding inside the header */
-            background-color: #F6F4F0; /* Sets a soft light background color */
-            border-bottom: 2px solid #4DA1A9; /* Adds a teal border at the bottom of the header */
-        }
-
-        /* Logo Styling */
-        .logo {
-            max-width: 100px; /* Restricts the maximum width of the logo */
-        }
-
-        /* Navigation Bar Styling */
-        nav {
-            display: flex; /* Enables flexbox layout for navigation links */
-            flex-wrap: wrap; /* Ensures links wrap on smaller screens */
-            justify-content: center; /* Centers links horizontally */
-            background-color: #2E5077; /* Sets a dark blue background for the navbar */
-            padding: 15px; /* Adds padding inside the navbar */
-        }
-        nav a {
-            color: #F6F4F0; /* Sets the text color of the links to soft light */
-            text-decoration: none; /* Removes the underline from the links */
-            margin: 0 20px; /* Adds horizontal spacing between navigation links */
-            font-size: 16px; /* Adjusts the font size of the links */
-        }
-        nav a:hover {
-            color: #79D7BE; /* Changes the text color of the links to light teal on hover */
-        }
-
-        /* Main Content Styling */
-        .mainpage {
-            margin-top: 20px; /* Adds spacing above the main content section */
-        }
-
-        /* Additional Content Styling */
-        .content {
-            background-color: #79D7BE; /* Sets a light teal background for the content section */
-            padding: 20px; /* Adds padding inside the content section */
-            border-radius: 10px; /* Rounds the corners of the content box */
-            text-align: center; /* Centers the text within the content box */
-            width: 100%; /* Ensures the content section spans the full width of its container */
-            max-width: 1200px; /* Sets a maximum width for readability on large screens */
-            margin: 20px auto; /* Centers the content horizontally and adds vertical spacing */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a floating effect */
-            border: 2px solid #2E5077; /* Adds a dark blue-gray border around the content section */
-        }
-        .content h2 {
-            color: #2E5077; /* Sets the color of the heading text to dark blue-gray */
-            font-size: 24px; /* Adjusts the size of the headings */
-        }
-        .content p {
-            color: #4DA1A9; /* Sets the color of the paragraph text to medium teal */
-            font-size: 16px; /* Adjusts the font size of the paragraph text */
-            line-height: 1.5; /* Sets the line height to improve readability */
-            max-width: 80%; /* Limits the width of the text for easier reading */
-            margin: 0 auto; /* Centers the paragraph text horizontally */
-        }
-
-        /* Footer Styling */
-        footer {
-            background-color: #2E5077; /* Sets the footer background to dark blue */
-            color: #F6F4F0; /* Sets the text color to soft light */
-            padding: 10px 20px; /* Adds padding inside the footer */
-            font-size: 14px; /* Adjusts the size of the footer text */
-        }
-        footer p {
-            margin: 0; /* Removes default margin from the paragraph */
-        }
-    </style>
 </head>
 <body>
     <!-- Header Section -->
-    <header role="banner"> <!-- Declares the header as a banner role for accessibility -->
+    <header>
         <h1>Slovenske Vzdelavacie Centrum</h1> <!-- Displays the website's title -->
-        <img src="/images/logo.png" alt="Website Logo" class="logo" /> <!-- Displays the logo with a descriptive alt text -->
+        <img src="/images/logo.png" alt="Website Logo" class="logo" /> <!-- Displays the logo -->
     </header>
 
     <!-- Navigation Bar -->
@@ -107,22 +25,57 @@
     </nav>
 
     <!-- Main Content Section -->
-    <main class="mainpage" role="main"> <!-- Declares the main content area and assigns it a role for accessibility -->
-        <section> <!-- Groups related content into a semantic section -->
-            <h2>Welcome to Our Dates and Events</h2> <!-- Main heading for the section -->
-            <p>Check out our events and important dates here.</p> <!-- Descriptive text for the section -->
-        </section>
+    <main>
+        <h2>Exciting Events</h2>
+        <p>Join us for our upcoming events and activities on these dates.</p>
+
+        <!-- Activities Section -->
+        <div class="activities">
+            <!-- Activity 1 -->
+            <div class="activity-card">
+                <h3>Tree Planting Drive</h3>
+                <p>Date: 10th June 2025</p>
+                <p>Join us in making the world greener by planting trees in our community.</p>
+                <button onclick="location.href='members.html'">Enroll</button>
+            </div>
+
+            <!-- Activity 2 -->
+            <div class="activity-card">
+                <h3>Food Donation Camp</h3>
+                <p>Date: 15th July 2025</p>
+                <p>Help us distribute food to families in need and make an impact.</p>
+                <button onclick="location.href='members.html'">Enroll</button>
+            </div>
+
+            <!-- Activity 3 -->
+            <div class="activity-card">
+                <h3>Charity Fun Run</h3>
+                <p>Date: 20th August 2025</p>
+                <p>Participate in our fun run to raise awareness for various causes.</p>
+                <button onclick="location.href='members.html'">Enroll</button>
+            </div>
+
+            <!-- Activity 4 -->
+            <div class="activity-card">
+                <h3>Workshop on Volunteering</h3>
+                <p>Date: 5th September 2025</p>
+                <p>Learn the skills you need to become an impactful volunteer.</p>
+                <button onclick="location.href='members.html'">Enroll</button>
+            </div>
+
+            <!-- Activity 5 -->
+            <div class="activity-card">
+                <h3>Fundraising Gala</h3>
+                <p>Date: 10th October 2025</p>
+                <p>Attend our gala to support and raise funds for community projects.</p>
+                <button onclick="location.href='members.html'">Enroll</button>
+            </div>
+        </div>
     </main>
 
-    <!-- Additional Content Section -->
-    <section class="content" role="complementary"> <!-- Section for additional content -->
-        <h2>Upcoming Events</h2> <!-- Subheading for the section -->
-        <p>Stay tuned for updates on our exciting programs and initiatives!</p> <!-- Paragraph about upcoming events -->
-    </section>
-
     <!-- Footer Section -->
-    <footer role="contentinfo"> <!-- Declares the footer as a contentinfo role for accessibility -->
-        <p>&copy; 2025 Slovenske Vzdelavacie Centrum. All rights reserved.</p> <!-- Displays copyright information -->
+    <footer>
+        <p>&copy; 2025 Slovenske Vzdelavacie Centrum. All rights reserved.</p>
     </footer>
 </body>
 </html>
