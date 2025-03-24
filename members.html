@@ -1,11 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Membership</title>
-    <link href="/css/style.css" rel="stylesheet" />
-    <script src="/scripts/javascript.js" defer></script>
+    <title>Membership sign up form</title>
+    <link rel="stylesheet" href="styles.css" />
     <style>
         /* Reset default margin and padding for a consistent layout */
         body {
@@ -37,8 +37,8 @@
             text-decoration: none;
             margin: 0 10px;
         }
-        /* Main Content Section Styling */
-        .content {
+        /* Form Container Styling */
+        .form-container {
             background-color: #79D7BE;
             padding: 20px;
             border-radius: 10px;
@@ -49,11 +49,11 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border: 2px solid #2E5077;
         }
-        .content h2 {
+        .form-container h2 {
             color: #2E5077;
             font-size: 24px;
         }
-        .content p {
+        .form-container p {
             color: #4DA1A9;
             font-size: 16px;
             line-height: 1.5;
@@ -61,24 +61,24 @@
             margin: 0 auto;
         }
         /* Sign-Up Form Section Styling */
-        .signup-form {
+        .form-container form {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             gap: 10px;
         }
-        .signup-form label,
-        .signup-form input,
-        .signup-form textarea,
-        .signup-form select,
-        .signup-form button {
+        .form-container form label,
+        .form-container form input,
+        .form-container form textarea,
+        .form-container form select,
+        .form-container form button {
             flex: 1 1 45%;
             margin-bottom: 10px;
         }
-        .signup-form textarea {
+        .form-container form textarea {
             flex: 1 1 100%;
         }
-        .signup-form button {
+        .form-container form button {
             flex: 1 1 100%;
             background-color: #2E5077;
             color: #F6F4F0;
@@ -95,7 +95,7 @@
         <img src="images/logo.png" alt="Logo" class="logo" />
     </header>
 
-    <!-- Navigation Bar -->
+    <!-- Navigation Section -->
     <nav>
         <a href="index.html">Homepage</a>
         <a href="aboutus.html">About Us</a>
@@ -105,51 +105,40 @@
         <a href="members.html">Members</a>
     </nav>
 
-    <!-- Main Content Section -->
-    <main class="mainpage" role="main">
-        <section>
-            <h2>Welcome to Our Membership</h2>
-            <p>Become a part of our community by signing up as a member.</p>
-        </section>
-    </main>
+    <!-- Form Container -->
+    <div class="form-container">
+        <h2>Sign up for membership</h2>
+        <form action="/submit_form" method="POST">
+            <!-- Name Field -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required />
 
-    <!-- Sign-Up Form Section -->
-    <section class="content" role="form">
-        <h2>Sign Up</h2>
-        <p>If you're interested in joining us, please fill out the form below to become a member and support our mission.</p>
-        <form action="/submit_form" method="POST" class="signup-form" aria-label="Membership Sign-up">
-            <fieldset>
-                <legend>Membership Information</legend>
+            <!-- Email Field -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required />
 
-                <!-- Name Input Field -->
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your full name" required aria-label="Full Name" />
+            <!-- Phone Field -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" />
 
-                <!-- Email Input Field -->
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email address" required aria-label="Email Address" />
+            <!-- Dropdown for Event Selection -->
+            <label for="event">Select an Event:</label>
+            <select id="event" name="event" required>
+                <option value="">Choose an event</option>
+                <option value="tree-planting">Tree Planting Drive</option>
+                <option value="food-donation">Food Donation Camp</option>
+                <option value="charity-run">Charity Fun Run</option>
+                <option value="volunteer-workshop">Workshop on Volunteering</option>
+                <option value="fundraising-gala">Fundraising Gala</option>
+            </select>
 
-                <!-- Phone Number Input Field -->
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" aria-label="Phone Number" />
+            <!-- Additional Comments -->
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Enter any additional comments"></textarea>
 
-                <!-- Message Textarea -->
-                <label for="message">Message (Optional):</label>
-                <textarea id="message" name="message" placeholder="Share why you'd like to join" aria-label="Optional Message"></textarea>
-
-                <!-- Membership Type Dropdown -->
-                <label for="membership-type">Membership Type:</label>
-                <select id="membership-type" name="membership-type" required aria-label="Membership Type">
-                    <option value="">Select a membership type</option>
-                    <option value="student">Student</option>
-                    <option value="professional">Professional</option>
-                    <option value="supporter">Supporter</option>
-                </select>
-
-                <!-- Submit Button -->
-                <button type="submit" class="submit-button">Submit</button>
-            </fieldset>
+            <!-- Submit Button -->
+            <button type="submit">Sign Up</button>
         </form>
-    </section>
+    </div>
 </body>
 </html>
