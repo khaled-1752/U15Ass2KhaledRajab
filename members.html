@@ -6,6 +6,128 @@
     <title>Membership</title> <!-- Specifies the title of the webpage shown on the browser tab -->
     <link href="/css/style.css" rel="stylesheet" /> <!-- Links an external CSS file for the webpage's styles -->
     <script src="/scripts/javascript.js" defer></script> <!-- Links an external JavaScript file and ensures it executes after the HTML is parsed -->
+    <style>
+        /* Reset default margin and padding for a consistent layout */
+        body {
+            font-family: Arial, sans-serif, "Helvetica Neue", Helvetica; /* Sets the default font style with fallback options */
+            margin: 0; /* Removes default margin */
+            padding: 0; /* Removes default padding */
+            text-align: center; /* Centers text globally across the body */
+        }
+
+        /* Header Styling */
+        header {
+            display: flex; /* Uses flexbox for flexible layout */
+            justify-content: space-between; /* Positions the title and logo at opposite ends */
+            align-items: center; /* Vertically aligns the title and logo */
+            padding: 20px; /* Adds internal padding inside the header */
+            background-color: #F6F4F0; /* Sets a soft light background color */
+            border-bottom: 2px solid #4DA1A9; /* Adds a teal border at the bottom */
+        }
+
+        /* Logo Styling */
+        .logo {
+            max-width: 100px; /* Restricts the maximum width of the logo for scaling */
+        }
+
+        /* Navigation Bar Styling */
+        nav {
+            display: flex;
+            flex-wrap: wrap; /* Ensures links wrap on smaller screens */
+            justify-content: center; /* Centers links horizontally */
+            background-color: #2E5077; /* Sets a dark blue background for the navbar */
+            padding: 15px; /* Adds padding inside the navbar */
+        }
+        nav ul {
+            list-style: none; /* Removes bullet points from the list */
+            padding: 0; /* Removes default padding */
+            margin: 0; /* Removes default margin */
+            display: flex; /* Displays list items horizontally */
+        }
+        nav li {
+            margin: 5px 15px; /* Adds spacing between list items */
+        }
+        nav a {
+            color: #F6F4F0; /* Sets the link text color to soft light for contrast */
+            text-decoration: none; /* Removes underline from the links */
+            font-size: 16px; /* Adjusts the font size of the links */
+        }
+        nav a:hover {
+            color: #79D7BE; /* Changes the link text color to light teal on hover */
+        }
+
+        /* Main Content Section Styling */
+        .mainpage {
+            margin-top: 20px; /* Adds vertical spacing above the main content section */
+        }
+
+        /* Additional Content Section Styling */
+        .content {
+            background-color: #79D7BE; /* Sets a light teal background for the content section */
+            padding: 20px; /* Adds padding inside the content box */
+            border-radius: 10px; /* Rounds the corners of the content box */
+            text-align: center; /* Centers the text inside the content box */
+            width: 100%; /* Ensures the content box spans the full width */
+            max-width: 1200px; /* Sets a maximum width for readability on larger screens */
+            margin: 20px auto; /* Centers the content box horizontally and adds vertical spacing */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to create a floating effect */
+            border: 2px solid #2E5077; /* Adds a dark blue-gray border around the content box */
+        }
+        .content h2 {
+            color: #2E5077; /* Sets the heading text color to dark blue-gray */
+            font-size: 24px; /* Adjusts the size of the heading */
+        }
+        .content p {
+            color: #4DA1A9; /* Sets the paragraph text color to medium teal */
+            font-size: 16px; /* Adjusts the font size of the paragraph text */
+            line-height: 1.5; /* Increases the line height for better readability */
+            max-width: 80%; /* Limits the width of the paragraph text for readability */
+            margin: 0 auto; /* Centers the paragraph text horizontally */
+        }
+
+        /* Form Styling */
+        .signup-form {
+            display: flex; /* Uses flexbox for flexible layout */
+            flex-direction: column; /* Stacks form elements vertically */
+            align-items: center; /* Centers the form elements */
+            gap: 15px; /* Adds spacing between form elements */
+            max-width: 600px; /* Limits the maximum width of the form */
+            margin: 20px auto; /* Centers the form horizontally and adds vertical spacing */
+        }
+        .signup-form label {
+            font-weight: bold; /* Makes labels bold for emphasis */
+            color: #2E5077; /* Matches the heading color */
+        }
+        .signup-form input,
+        .signup-form textarea {
+            width: 90%; /* Makes input fields span most of the form width */
+            max-width: 600px; /* Restricts maximum width */
+            padding: 10px; /* Adds padding inside the fields */
+            border-radius: 5px; /* Rounds the corners */
+            border: 1px solid #4DA1A9; /* Adds a teal border */
+            font-size: 16px; /* Sets the text size */
+        }
+        .signup-form input:focus,
+        .signup-form textarea:focus {
+            outline: none; /* Removes the default focus outline */
+            border: 1px solid #2E5077; /* Changes the border color on focus */
+            box-shadow: 0 0 5px #2E5077; /* Adds a subtle glow effect on focus */
+        }
+        .signup-form .submit-button {
+            background-color: #2E5077; /* Dark blue background for the button */
+            color: #F6F4F0; /* Light text for contrast */
+            border: none; /* Removes default border */
+            padding: 10px 20px; /* Adds padding inside the button */
+            border-radius: 5px;
+        }
+
+        /* Footer Styling */
+        footer {
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
@@ -15,14 +137,14 @@
     </header>
 
     <!-- Navigation Bar -->
-<nav>
-    <a href="index.html">Homepage</a> <!-- Navigation link to the Home page -->
-    <a href="aboutus.html">About Us</a> <!-- Navigation link to the About Us page -->
-    <a href="courses.html">Courses</a> <!-- Navigation link to Courses page -->
-    <a href="dates.html">Dates</a> <!-- Navigation link to Dates page -->
-    <a href="educationgames.html">Education Games</a> <!-- Navigation link to Education Games page -->
-    <a href="members.html">Members</a> <!-- Navigation link to Members page -->
-</nav>
+    <nav>
+            <a href="index.html">Homepage</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="courses.html">Courses</a>
+            <a href="dates.html">Dates</a>
+            <a href="educationgames.html">Education Games</a>
+            <a href="members.html">Members</a>
+    </nav>
 
     <!-- Main Content Section -->
     <main class="mainpage" role="main"> <!-- Declares the main section with a role for accessibility -->
@@ -36,128 +158,17 @@
     <section class="content"> <!-- Declares a section for the sign-up form -->
         <h2>Sign Up</h2> <!-- Subheading for the sign-up form -->
         <p>If you're interested in joining us, please fill out the form below to become a member and support our mission.</p> <!-- Provides context for the sign-up form -->
-        <form action="/submit_form" method="POST" class="signup-form"> <!-- Creates a form to collect user information -->
-            <label for="name">Full Name:</label> <!-- Label for the Full Name field -->
-            <input type="text" id="name" name="name" placeholder="Enter your full name" required /> <!-- Input field for Full Name -->
+        <form action="/submit_form" method="POST" class="signup-form" aria-label="Membership Sign-up">
+            <fieldset>
+                <legend>Membership Information</legend>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required aria-label="Full Name" />
 
-            <label for="email">Email Address:</label> <!-- Label for the Email Address field -->
-            <input type="email" id="email" name="email" placeholder="Enter your email address" required /> <!-- Input field for Email -->
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required aria-label="Email Address" />
 
-            <label for="phone">Phone Number:</label> <!-- Label for the Phone Number field -->
-            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" /> <!-- Input field for Phone Number -->
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" aria-label="Phone Number" />
 
-            <label for="message">Message (Optional):</label> <!-- Label for the Message field -->
-            <textarea id="message" name="message" placeholder="Share why you'd like to join"></textarea> <!-- Textarea for optional user message -->
-
-            <button type="submit" class="submit-button">Submit</button> <!-- Submit button for the form -->
-        </form>
-    </section>
-
-    <!-- Footer Section -->
-    <footer role="contentinfo"> <!-- Declares the footer as a contentinfo role for accessibility -->
-        <p>&copy; 2025 Slovenske Vzdelavacie Centrum. All rights reserved.</p> <!-- Displays copyright information -->
-    </footer>
-</body>
-</html>
-<style>
-    /* Reset default margin and padding for a consistent layout */
-body {
-    font-family: Arial, sans-serif, "Helvetica Neue", Helvetica; /* Sets the default font style with fallback options */
-    margin: 0; /* Removes default margin */
-    padding: 0; /* Removes default padding */
-    text-align: center; /* Centers text globally across the body */
-}
-
-/* Header Styling */
-header {
-    display: flex; /* Uses flexbox for flexible layout */
-    justify-content: space-between; /* Positions the title and logo at opposite ends */
-    align-items: center; /* Vertically aligns the title and logo */
-    padding: 20px; /* Adds internal padding inside the header */
-    background-color: #F6F4F0; /* Sets a soft light background color */
-    border-bottom: 2px solid #4DA1A9; /* Adds a teal border at the bottom */
-}
-
-/* Logo Styling */
-.logo {
-    max-width: 100px; /* Restricts the maximum width of the logo for scaling */
-}
-
-/* Navigation Bar Styling */
-nav {
-    background-color: #2E5077; /* Sets a dark blue background for the navbar */
-    padding: 10px; /* Adds padding inside the navbar */
-}
-nav a {
-    color: #F6F4F0; /* Sets the link text color to soft light for contrast */
-    text-decoration: none; /* Removes underline from the links */
-    margin: 0 10px; /* Adds horizontal spacing between the links */
-    font-size: 16px; /* Adjusts the font size of the links */
-}
-nav a:hover {
-    color: #79D7BE; /* Changes the link text color to light teal on hover */
-}
-
-/* Main Content Section Styling */
-.mainpage {
-    margin-top: 20px; /* Adds vertical spacing above the main content section */
-}
-
-/* Additional Content Section Styling */
-.content {
-    background-color: #79D7BE; /* Sets a light teal background for the content section */
-    padding: 20px; /* Adds padding inside the content box */
-    border-radius: 10px; /* Rounds the corners of the content box */
-    text-align: center; /* Centers the text inside the content box */
-    width: 100%; /* Ensures the content box spans the full width */
-    max-width: 1200px; /* Sets a maximum width for readability on larger screens */
-    margin: 20px auto; /* Centers the content box horizontally and adds vertical spacing */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to create a floating effect */
-    border: 2px solid #2E5077; /* Adds a dark blue-gray border around the content box */
-}
-.content h2 {
-    color: #2E5077; /* Sets the heading text color to dark blue-gray */
-    font-size: 24px; /* Adjusts the size of the heading */
-}
-.content p {
-    color: #4DA1A9; /* Sets the paragraph text color to medium teal */
-    font-size: 16px; /* Adjusts the font size of the paragraph text */
-    line-height: 1.5; /* Increases the line height for better readability */
-    max-width: 80%; /* Limits the width of the paragraph text for readability */
-    margin: 0 auto; /* Centers the paragraph text horizontally */
-}
-
-/* Form Styling */
-.signup-form {
-    display: flex; /* Uses flexbox for flexible layout */
-    flex-direction: column; /* Stacks form elements vertically */
-    align-items: center; /* Centers the form elements */
-    gap: 15px; /* Adds spacing between form elements */
-    max-width: 600px; /* Limits the maximum width of the form */
-    margin: 20px auto; /* Centers the form horizontally and adds vertical spacing */
-}
-.signup-form label {
-    font-weight: bold; /* Makes labels bold for emphasis */
-    color: #2E5077; /* Matches the heading color */
-}
-.signup-form input,
-.signup-form textarea {
-    width: 100%; /* Makes input fields span the full width of the form */
-    padding: 10px; /* Adds padding inside the fields */
-    border-radius: 5px; /* Rounds the corners */
-    border: 1px solid #4DA1A9; /* Adds a teal border */
-    font-size: 16px; /* Sets the text size */
-}
-.signup-form input:focus,
-.signup-form textarea:focus {
-    outline: none; /* Removes the default focus outline */
-    border: 1px solid #2E5077; /* Changes the border color on focus */
-    box-shadow: 0 0 5px #2E5077; /* Adds a subtle glow effect on focus */
-}
-.signup-form .submit-button {
-    background-color: #2E5077; /* Dark blue background for the button */
-    color: #F6F4F0; /* Light text for contrast */
-    border: none; /* Removes default border */
-    padding: 10px 20px; /* Adds padding inside the button */
-    border-radius: 5px;
-</style>
+                <label for="message">Message (Optional):</label>
+                <textarea id="message" name="message" placeholder="Share why you'd like
