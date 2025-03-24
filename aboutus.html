@@ -26,9 +26,15 @@
 
     <!-- Main Content Area -->
     <main role="main" class="mainpage"> <!-- Defines the main role for accessibility -->
-        <section> <!-- Groups related content within a semantic section tag -->
-            <h2>Welcome to About Us</h2> <!-- Section heading -->
-            <p>Learn more about our organization, our mission, and our values. This page provides an overview of who we are and what we do.</p> <!-- Paragraph describing the page's purpose -->
+        <section class="about-section">
+            <h2>About Slovenske Vzdelavacie Centrum</h2> <!-- Section heading -->
+            <p>At Slovenske Vzdelavacie Centrum, we aim to provide comprehensive and high-quality educational resources to our community. Founded in 2025, our organization has grown to become a leading provider of learning opportunities and support.</p> <!-- Paragraph describing the organization -->
+            <img src="images/mission.jpg" alt="Our Mission" class="about-img"> <!-- Mission image -->
+            <p>Our mission is to empower individuals through education, providing them with the skills and knowledge they need to succeed. We believe in the power of learning to transform lives and communities.</p> <!-- Mission description -->
+            <img src="images/values.jpg" alt="Our Values" class="about-img"> <!-- Values image -->
+            <p>We are guided by our core values of integrity, innovation, and inclusivity. We strive to create an environment where everyone feels welcome and supported in their educational journey.</p> <!-- Values description -->
+            <img src="images/team.jpg" alt="Our Team" class="about-img"> <!-- Team image -->
+            <p>Our dedicated team of educators, support staff, and volunteers work tirelessly to provide the best possible learning experience. We are passionate about education and committed to helping our community thrive.</p> <!-- Team description -->
         </section>
     </main>
 
@@ -44,8 +50,8 @@
     </footer>
 </body>
 </html>
+
 <style>
-    
 /* Reset default margin and padding for a consistent layout */
 body {
     font-family: Arial, sans-serif; /* Sets the default font style */
@@ -77,14 +83,46 @@ nav a {
     margin: 0 10px; /* Adds spacing between links */
 } 
 /* Main Content Section Styling */
-.content {
+.mainpage {
+    padding: 20px;
+    text-align: left; /* Align text to the left for better readability */
+}
+.mainpage section {
     background-color: #79D7BE; /* Light teal background */
     padding: 20px; /* Add space inside the main section */
     border-radius: 10px; /* Rounded corners */
-    text-align: center; /* Center text */
-    width: 100%; /* Full width */
-    max-width: 100%; /* Ensure it doesn't exceed the viewport */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border: 2px solid #2E5077; /* Dark blue-gray border */
+    width: 80%; /* Limit section width for better readability */
     margin: 0 auto; /* Center horizontally */
+}
+.mainpage section h2 {
+    color: #2E5077; /* Dark blue-gray color for heading */
+    font-size: 24px; /* Adjust font size */
+}
+.mainpage section p {
+    color: #4DA1A9; /* Medium teal for paragraph text */
+    font-size: 16px; /* Adjust font size */
+    line-height: 1.5; /* Improve readability */
+}
+.about-img {
+    width: 100%; /* Make images responsive */
+    max-width: 600px; /* Set a maximum width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px 0; /* Add margin above and below images */
+    border-radius: 10px; /* Rounded corners for images */
+}
+.about-section {
+    text-align: center; /* Center text in the about section */
+}
+/* Additional Content Section Styling */
+.content {
+    background-color: #79D7BE; /* Light teal background */
+    padding: 20px; /* Add space inside the section */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center text */
+    width: 80%; /* Limit section width for better readability */
+    margin: 20px auto; /* Center horizontally with some margin */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
     border: 2px solid #2E5077; /* Dark blue-gray border */
 }
@@ -99,23 +137,12 @@ nav a {
     max-width: 80%; /* Limit text width for better readability */
     margin: 0 auto; /* Center text */
 }
-.sections {
-    display: flex; /* Enables side-by-side layout */
-    justify-content: space-around; /* Spaces sections evenly */
-    padding: 20px;
-}
-/* Individual Section Styling */
-.section {
-    width: 45%; /* Sets equal width for both sections */
-    padding: 20px;
-    border: 1px solid #4DA1A9; /* Subtle border in teal */
-    background-color: #F6F4F0; /* Soft light background for readability */
-}
 /* Footer Styling */
 footer {
     background-color: #2E5077; /* Matches nav bar */
     color: #F6F4F0; /* Soft light text for contrast */
     padding: 10px;
     position: relative;
+    text-align: center; /* Center text in the footer */
 }
-</style> 
+</style>
