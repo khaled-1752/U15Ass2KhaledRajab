@@ -3,122 +3,147 @@
 <head>
     <meta charset="UTF-8" /> <!-- Sets the character encoding to UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures the webpage is responsive on all devices -->
-    <title>Vertical Registration Form</title> <!-- Specifies the title of the webpage -->
+    <title>Membership</title> <!-- Specifies the title of the webpage shown on the browser tab -->
+    <link href="/css/style.css" rel="stylesheet" /> <!-- Links an external CSS file for the webpage's styles -->
+    <script src="/scripts/javascript.js" defer></script> <!-- Links an external JavaScript file and ensures it executes after the HTML is parsed -->
 </head>
 <body>
-    <!-- Header Section -->
-    <header role="banner" class="site-header">
-        <h1>Slovenske Vzdelavacie Centrum</h1> <!-- Displays website title -->
-        <img src="images/logo.png" alt="Logo" class="logo" /> <!-- Displays website logo -->
+    <!-- Header Section with Logo -->
+    <header role="banner" class="site-header"> <!-- Defines a banner role for accessibility -->
+        <h1>Slovenske Vzdelavacie Centrum</h1> <!-- Displays the website's main title -->
+        <img src="images/logo.png" alt="Logo" class="logo" /> <!-- Displays the site logo with a descriptive alt text -->
     </header>
 
-    <!-- Vertical Registration Form -->
-    <div class="form-container">
-        <form action="/submit_registration" method="POST"> <!-- Form submission -->
-            <!-- Full Name -->
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required />
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Homepage</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="courses.html">Courses</a>
+        <a href="dates.html">Dates</a>
+        <a href="educationgames.html">Education Games</a>
+        <a href="members.html">Members</a>
+    </nav>
 
-            <!-- Email -->
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required />
+    <!-- Main Content Section -->
+    <main class="mainpage" role="main"> <!-- Declares the main section with a role for accessibility -->
+        <section> <!-- Groups related content into a semantic section -->
+            <h2>Welcome to Our Membership</h2> <!-- Heading for the membership section -->
+            <p>Become a part of our community by signing up as a member.</p> <!-- Description of the membership -->
+        </section>
+    </main>
 
-            <!-- Phone -->
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" />
+    <!-- Sign-Up Form Section -->
+    <section class="content" role="form"> <!-- Declares the section for the sign-up form with a semantic role -->
+        <h2>Sign Up</h2> <!-- Subheading for the sign-up form -->
+        <p>If you're interested in joining us, please fill out the form below to become a member and support our mission.</p> <!-- Context for the form -->
+        <form action="/submit_form" method="POST" class="signup-form" aria-label="Membership Sign-up"> <!-- Starts the sign-up form -->
+            <fieldset> <!-- Groups form fields for better structure -->
+                <legend>Membership Information</legend> <!-- Describes the purpose of the form -->
 
-            <!-- Event Selection -->
-            <label for="event">Choose an Event:</label>
-            <select id="event" name="event" required>
-                <option value="">Select an event</option>
-                <option value="tree-planting">Tree Planting Drive</option>
-                <option value="charity-run">Charity Fun Run</option>
-                <option value="food-donation">Food Donation Camp</option>
-                <option value="volunteer-workshop">Workshop on Volunteering</option>
-                <option value="fundraising-gala">Fundraising Gala</option>
-            </select>
+                <!-- Name Input Field -->
+                <label for="name">Full Name:</label> <!-- Label for the Name input -->
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required aria-label="Full Name" /> <!-- Text input for Name -->
 
-            <!-- Comments -->
-            <label for="comments">Comments (Optional):</label>
-            <textarea id="comments" name="comments" placeholder="Any additional details..." rows="4"></textarea>
+                <!-- Email Input Field -->
+                <label for="email">Email Address:</label> <!-- Label for the Email input -->
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required aria-label="Email Address" /> <!-- Email input -->
 
-            <!-- Submit Button -->
-            <button type="submit">Register</button>
+                <!-- Phone Number Input Field -->
+                <label for="phone">Phone Number:</label> <!-- Label for the Phone Number input -->
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" aria-label="Phone Number" /> <!-- Phone number input -->
+
+                <!-- Message Textarea -->
+                <label for="message">Message (Optional):</label> <!-- Label for the Message field -->
+                <textarea id="message" name="message" placeholder="Share why you'd like to join" aria-label="Optional Message"></textarea> <!-- Textarea for optional user message -->
+
+                <!-- Membership Type Dropdown -->
+                <label for="membership-type">Membership Type:</label> <!-- Label for Membership Type dropdown -->
+                <select id="membership-type" name="membership-type" required aria-label="Membership Type"> <!-- Dropdown selection -->
+                    <option value="">Select a membership type</option>
+                    <option value="student">Student</option>
+                    <option value="professional">Professional</option>
+                    <option value="supporter">Supporter</option>
+                </select>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-button">Submit</button> <!-- Button for submitting the form -->
+            </fieldset>
         </form>
-    </div>
+    </section>
+
+    <style>
+        /* Reset default margin and padding for a consistent layout */
+        body {
+            font-family: Arial, sans-serif; /* Sets the default font style */
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Centers text globally */
+        } 
+        /* Header Styling */
+        header {
+            display: flex; /* Uses flexbox for layout */
+            justify-content: space-between; /* Pushes content to opposite sides */
+            align-items: center; /* Aligns items vertically */
+            padding: 20px;
+            background-color: #F6F4F0; /* Soft light background */
+            border-bottom: 2px solid #4DA1A9; /* Subtle bottom border in teal */
+        } 
+        /* Logo Styling */
+        .logo {
+            max-width: 100px; /* Restricts logo size */
+        } 
+        /* Navigation Bar Styling */
+        nav {
+            background-color: #2E5077; /* Dark blue background for contrast */
+            padding: 10px;
+        }
+        nav a {
+            color: #F6F4F0; /* Soft light text for contrast */
+            text-decoration: none; /* Removes underline from links */
+            margin: 0 10px; /* Adds spacing between links */
+        } 
+        /* Main Content Section Styling */
+        .content {
+            background-color: #79D7BE; /* Light teal background */
+            padding: 20px; /* Add space inside the main section */
+            border-radius: 10px; /* Rounded corners */
+            text-align: center; /* Center text */
+            width: 100%; /* Full width */
+            max-width: 100%; /* Ensure it doesn't exceed the viewport */
+            margin: 0 auto; /* Center horizontally */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+            border: 2px solid #2E5077; /* Dark blue-gray border */
+        }
+        .content h2 {
+            color: #2E5077; /* Dark blue-gray color for heading */
+            font-size: 24px; /* Adjust font size */
+        }
+        .content p {
+            color: #4DA1A9; /* Medium teal for paragraph text */
+            font-size: 16px; /* Adjust font size */
+            line-height: 1.5; /* Improve readability */
+            max-width: 80%; /* Limit text width for better readability */
+            margin: 0 auto; /* Center text */
+        }
+        .sections {
+            display: flex; /* Enables side-by-side layout */
+            justify-content: space-around; /* Spaces sections evenly */
+            padding: 20px;
+        }
+        /* Individual Section Styling */
+        .section {
+            width: 45%; /* Sets equal width for both sections */
+            padding: 20px;
+            border: 1px solid #4DA1A9; /* Subtle border in teal */
+            background-color: #F6F4F0; /* Soft light background for readability */
+        }
+        /* Footer Styling */
+        footer {
+            background-color: #2E5077; /* Matches nav bar */
+            color: #F6F4F0; /* Soft light text for contrast */
+            padding: 10px;
+            position: relative;
+        }
+    </style>
 </body>
 </html>
-<style>
-    /* Reset default margin and padding for a consistent layout */
-body {
-    font-family: Arial, sans-serif; /* Sets the default font style */
-    margin: 0;
-    padding: 0;
-    text-align: center; /* Centers text globally */
-} 
-/* Header Styling */
-header {
-    display: flex; /* Uses flexbox for layout */
-    justify-content: space-between; /* Pushes content to opposite sides */
-    align-items: center; /* Aligns items vertically */
-    padding: 20px;
-    background-color: #F6F4F0; /* Soft light background */
-    border-bottom: 2px solid #4DA1A9; /* Subtle bottom border in teal */
-} 
-/* Logo Styling */
-.logo {
-    max-width: 100px; /* Restricts logo size */
-} 
-/* Navigation Bar Styling */
-nav {
-    background-color: #2E5077; /* Dark blue background for contrast */
-    padding: 10px;
-}
-nav a {
-    color: #F6F4F0; /* Soft light text for contrast */
-    text-decoration: none; /* Removes underline from links */
-    margin: 0 10px; /* Adds spacing between links */
-} 
-/* Main Content Section Styling */
-.content {
-    background-color: #79D7BE; /* Light teal background */
-    padding: 20px; /* Add space inside the main section */
-    border-radius: 10px; /* Rounded corners */
-    text-align: center; /* Center text */
-    width: 100%; /* Full width */
-    max-width: 100%; /* Ensure it doesn't exceed the viewport */
-    margin: 0 auto; /* Center horizontally */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    border: 2px solid #2E5077; /* Dark blue-gray border */
-}
-.content h2 {
-    color: #2E5077; /* Dark blue-gray color for heading */
-    font-size: 24px; /* Adjust font size */
-}
-.content p {
-    color: #4DA1A9; /* Medium teal for paragraph text */
-    font-size: 16px; /* Adjust font size */
-    line-height: 1.5; /* Improve readability */
-    max-width: 80%; /* Limit text width for better readability */
-    margin: 0 auto; /* Center text */
-}
-.sections {
-    display: flex; /* Enables side-by-side layout */
-    justify-content: space-around; /* Spaces sections evenly */
-    padding: 20px;
-}
-/* Individual Section Styling */
-.section {
-    width: 45%; /* Sets equal width for both sections */
-    padding: 20px;
-    border: 1px solid #4DA1A9; /* Subtle border in teal */
-    background-color: #F6F4F0; /* Soft light background for readability */
-}
-/* Footer Styling */
-footer {
-    background-color: #2E5077; /* Matches nav bar */
-    color: #F6F4F0; /* Soft light text for contrast */
-    padding: 10px;
-    position: relative;
-}
-</style>
