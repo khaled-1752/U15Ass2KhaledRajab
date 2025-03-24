@@ -6,6 +6,96 @@
     <title>Education Games</title> <!-- Sets the title of the webpage, shown on the browser tab -->
     <link href="/css/style.css" rel="stylesheet" /> <!-- Links an external CSS file for styling -->
     <script src="/scripts/javascript.js" defer></script> <!-- Links an external JavaScript file and ensures it executes after the HTML is fully parsed -->
+    <style>
+        /* Reset default margin and padding for a consistent layout */
+        body {
+            font-family: Arial, sans-serif, "Helvetica Neue", Helvetica; /* Sets the default font style with fallback options */
+            margin: 0; /* Removes default margin from the body */
+            padding: 0; /* Removes default padding from the body */
+            text-align: center; /* Centers text within the body */
+        }
+
+        /* Header Styling */
+        header {
+            display: flex; /* Uses flexbox for flexible layout */
+            justify-content: space-between; /* Positions the title and logo at opposite ends of the header */
+            align-items: center; /* Vertically centers the title and logo */
+            padding: 20px; /* Adds internal spacing within the header */
+            background-color: #F6F4F0; /* Applies a soft light background color */
+            border-bottom: 2px solid #4DA1A9; /* Adds a teal border at the bottom of the header */
+        }
+
+        /* Logo Styling */
+        .logo {
+            max-width: 100px; /* Restricts the maximum width of the logo */
+        }
+
+        /* Navigation Bar Styling */
+        nav {
+            display: flex; /* Uses flexbox for navigation links */
+            flex-wrap: wrap; /* Ensures links wrap on smaller screens */
+            justify-content: center; /* Centers links horizontally */
+            background-color: #2E5077; /* Sets a dark blue background for the navigation bar */
+            padding: 15px; /* Adds padding inside the navigation bar */
+        }
+        nav ul {
+            list-style: none; /* Removes bullet points from the list */
+            padding: 0; /* Removes default padding */
+            margin: 0; /* Removes default margin */
+            display: flex; /* Displays list items horizontally */
+        }
+        nav li {
+            margin: 5px 15px; /* Adds spacing between list items */
+        }
+        nav a {
+            color: #F6F4F0; /* Sets the text color of the links to soft light */
+            text-decoration: none; /* Removes the underline from the links */
+            font-size: 16px; /* Adjusts the font size of the links for readability */
+        }
+        nav a:hover {
+            color: #79D7BE; /* Changes the text color of the links to light teal on hover */
+        }
+
+        /* Main Content Section Styling */
+        .mainpage {
+            margin-top: 20px; /* Adds vertical spacing above the main content section */
+        }
+
+        /* Additional Content Section Styling */
+        .content {
+            background-color: #79D7BE; /* Sets a light teal background color */
+            padding: 20px; /* Adds internal padding within the content section */
+            border-radius: 10px; /* Rounds the corners of the content box */
+            text-align: center; /* Centers the text within the content section */
+            width: 100%; /* Ensures the content box spans the full width of its container */
+            max-width: 1200px; /* Sets a maximum width for readability on larger screens */
+            margin: 20px auto; /* Centers the content section horizontally and adds vertical spacing */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a floating effect */
+            border: 2px solid #2E5077; /* Adds a dark blue-gray border around the content section */
+        }
+        .content h2 {
+            color: #2E5077; /* Sets the heading text color to dark blue-gray */
+            font-size: 24px; /* Adjusts the size of the heading text */
+        }
+        .content p {
+            color: #4DA1A9; /* Sets the color of the paragraph text to medium teal */
+            font-size: 16px; /* Adjusts the font size of the paragraph text */
+            line-height: 1.5; /* Increases the line height for better readability */
+            max-width: 80%; /* Limits the width of the text for readability */
+            margin: 0 auto; /* Centers the paragraph text horizontally */
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #2E5077; /* Sets the footer background color to match the navigation bar */
+            color: #F6F4F0; /* Sets the footer text color to soft light */
+            padding: 10px 20px; /* Adds internal padding within the footer */
+            font-size: 14px; /* Adjusts the font size of the footer text */
+        }
+        footer p {
+            margin: 0; /* Removes default margin from the paragraph */
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
@@ -14,15 +104,18 @@
         <img src="/images/logo.png" alt="Website Logo" class="logo" /> <!-- Displays the website's logo with descriptive alt text -->
     </header>
 
-   <!-- Navigation Bar -->
-<nav>
-    <a href="index.html">Homepage</a> <!-- Navigation link to the Home page -->
-    <a href="aboutus.html">About Us</a> <!-- Navigation link to the About Us page -->
-    <a href="courses.html">Courses</a> <!-- Navigation link to Courses page -->
-    <a href="dates.html">Dates</a> <!-- Navigation link to Dates page -->
-    <a href="educationgames.html">Education Games</a> <!-- Navigation link to Education Games page -->
-    <a href="members.html">Members</a> <!-- Navigation link to Members page -->
-</nav>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="dates.html">Dates</a></li>
+            <li><a href="educationgames.html">Education Games</a></li>
+            <li><a href="members.html">Members</a></li>
+        </ul>
+    </nav>
+
     <!-- Main Content Section -->
     <main class="mainpage" role="main"> <!-- Declares the main section and assigns it a role for accessibility -->
         <section> <!-- Groups related content into a semantic section -->
@@ -32,7 +125,7 @@
     </main>
 
     <!-- Additional Content Section -->
-    <section class="content"> <!-- Declares a section for additional details, styled using a CSS class -->
+    <section class="content" role="complementary"> <!-- Declares a complementary section for details -->
         <h2>Game Features</h2> <!-- Subheading for the additional content section -->
         <p>Our games focus on interactive learning, problem-solving, and teamwork. Stay tuned for updates on new games!</p> <!-- Descriptive paragraph about the games -->
     </section>
@@ -43,79 +136,3 @@
     </footer>
 </body>
 </html>
-<style>
-    /* Reset default margin and padding for a consistent layout */
-body {
-    font-family: Arial, sans-serif, "Helvetica Neue", Helvetica; /* Sets the default font style with fallback options */
-    margin: 0; /* Removes default margin from the body */
-    padding: 0; /* Removes default padding from the body */
-    text-align: center; /* Centers text within the body */
-}
-
-/* Header Styling */
-header {
-    display: flex; /* Uses flexbox for flexible layout */
-    justify-content: space-between; /* Positions the title and logo at opposite ends of the header */
-    align-items: center; /* Vertically centers the title and logo */
-    padding: 20px; /* Adds internal spacing within the header */
-    background-color: #F6F4F0; /* Applies a soft light background color */
-    border-bottom: 2px solid #4DA1A9; /* Adds a teal border at the bottom of the header */
-}
-
-/* Logo Styling */
-.logo {
-    max-width: 100px; /* Restricts the maximum width of the logo */
-}
-
-/* Navigation Bar Styling */
-nav {
-    background-color: #2E5077; /* Sets a dark blue background for the navigation bar */
-    padding: 10px; /* Adds internal spacing within the navigation bar */
-}
-nav a {
-    color: #F6F4F0; /* Sets the text color of the links to soft light */
-    text-decoration: none; /* Removes the underline from the links */
-    margin: 0 10px; /* Adds horizontal spacing between the links */
-    font-size: 16px; /* Adjusts the font size of the links for readability */
-}
-nav a:hover {
-    color: #79D7BE; /* Changes the text color of the links to light teal on hover */
-}
-
-/* Main Content Section Styling */
-.mainpage {
-    margin-top: 20px; /* Adds vertical spacing above the main content section */
-}
-
-/* Additional Content Section Styling */
-.content {
-    background-color: #79D7BE; /* Sets a light teal background color */
-    padding: 20px; /* Adds internal padding within the content section */
-    border-radius: 10px; /* Rounds the corners of the content box */
-    text-align: center; /* Centers the text within the content section */
-    width: 100%; /* Ensures the content box spans the full width of its container */
-    max-width: 1200px; /* Sets a maximum width for readability on larger screens */
-    margin: 20px auto; /* Centers the content section horizontally and adds vertical spacing */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a floating effect */
-    border: 2px solid #2E5077; /* Adds a dark blue-gray border around the content section */
-}
-.content h2 {
-    color: #2E5077; /* Sets the heading text color to dark blue-gray */
-    font-size: 24px; /* Adjusts the size of the heading text */
-}
-.content p {
-    color: #4DA1A9; /* Sets the color of the paragraph text to medium teal */
-    font-size: 16px; /* Adjusts the font size of the paragraph text */
-    line-height: 1.5; /* Increases the line height for better readability */
-    max-width: 80%; /* Limits the width of the text for readability */
-    margin: 0 auto; /* Centers the paragraph text horizontally */
-}
-
-/* Footer Styling */
-footer {
-    background-color: #2E5077; /* Sets the footer background color to match the navigation bar */
-    color: #F6F4F0; /* Sets the footer text color to soft light */
-    padding: 10px; /* Adds internal padding within the footer */
-    font-size: 14px; /* Adjusts the font size of the footer text */
-}
-</style>
