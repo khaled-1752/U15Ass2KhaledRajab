@@ -38,19 +38,11 @@
             background-color: #2E5077; /* Sets a dark blue background for the navbar */
             padding: 15px; /* Adds padding inside the navbar */
         }
-        nav ul {
-            list-style: none; /* Removes bullet points from the list */
-            padding: 0; /* Removes default padding */
-            margin: 0; /* Removes default margin */
-            display: flex; /* Displays list items horizontally */
-        }
-        nav li {
-            margin: 5px 15px; /* Adds spacing between list items */
-        }
         nav a {
             color: #F6F4F0; /* Sets the link text color to soft light for contrast */
             text-decoration: none; /* Removes underline from the links */
             font-size: 16px; /* Adjusts the font size of the links */
+            margin: 0 20px; /* Adds spacing between navigation links */
         }
         nav a:hover {
             color: #79D7BE; /* Changes the link text color to light teal on hover */
@@ -118,7 +110,8 @@
             color: #F6F4F0; /* Light text for contrast */
             border: none; /* Removes default border */
             padding: 10px 20px; /* Adds padding inside the button */
-            border-radius: 5px;
+            border-radius: 5px; /* Rounds the corners */
+            cursor: pointer; /* Changes cursor to pointer on hover */
         }
 
         /* Footer Styling */
@@ -138,12 +131,12 @@
 
     <!-- Navigation Bar -->
     <nav>
-            <a href="index.html">Homepage</a>
-            <a href="aboutus.html">About Us</a>
-            <a href="courses.html">Courses</a>
-            <a href="dates.html">Dates</a>
-            <a href="educationgames.html">Education Games</a>
-            <a href="members.html">Members</a>
+        <a href="index.html">Homepage</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="courses.html">Courses</a>
+        <a href="dates.html">Dates</a>
+        <a href="educationgames.html">Education Games</a>
+        <a href="members.html">Members</a>
     </nav>
 
     <!-- Main Content Section -->
@@ -157,18 +150,78 @@
     <!-- Sign-Up Form Section -->
     <section class="content"> <!-- Declares a section for the sign-up form -->
         <h2>Sign Up</h2> <!-- Subheading for the sign-up form -->
-        <p>If you're interested in joining us, please fill out the form below to become a member and support our mission.</p> <!-- Provides context for the sign-up form -->
-        <form action="/submit_form" method="POST" class="signup-form" aria-label="Membership Sign-up">
-            <fieldset>
-                <legend>Membership Information</legend>
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your full name" required aria-label="Full Name" />
-
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email address" required aria-label="Email Address" />
-
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" aria-label="Phone Number" />
-
-                <label for="message">Message (Optional):</label>
-                <textarea id="message" name="message" placeholder="Share why you'd like
+        <p>If you're interested in joining us, please fill out the form below to become a member and support our mission.</p> <!-- Provides context -->
+        <style>
+            /* Reset default margin and padding for a consistent layout */
+body {
+    font-family: Arial, sans-serif; /* Sets the default font style */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centers text globally */
+} 
+/* Header Styling */
+header {
+    display: flex; /* Uses flexbox for layout */
+    justify-content: space-between; /* Pushes content to opposite sides */
+    align-items: center; /* Aligns items vertically */
+    padding: 20px;
+    background-color: #F6F4F0; /* Soft light background */
+    border-bottom: 2px solid #4DA1A9; /* Subtle bottom border in teal */
+} 
+/* Logo Styling */
+.logo {
+    max-width: 100px; /* Restricts logo size */
+} 
+/* Navigation Bar Styling */
+nav {
+    background-color: #2E5077; /* Dark blue background for contrast */
+    padding: 10px;
+}
+nav a {
+    color: #F6F4F0; /* Soft light text for contrast */
+    text-decoration: none; /* Removes underline from links */
+    margin: 0 10px; /* Adds spacing between links */
+} 
+/* Main Content Section Styling */
+.content {
+    background-color: #79D7BE; /* Light teal background */
+    padding: 20px; /* Add space inside the main section */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center text */
+    width: 100%; /* Full width */
+    max-width: 100%; /* Ensure it doesn't exceed the viewport */
+    margin: 0 auto; /* Center horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border: 2px solid #2E5077; /* Dark blue-gray border */
+}
+.content h2 {
+    color: #2E5077; /* Dark blue-gray color for heading */
+    font-size: 24px; /* Adjust font size */
+}
+.content p {
+    color: #4DA1A9; /* Medium teal for paragraph text */
+    font-size: 16px; /* Adjust font size */
+    line-height: 1.5; /* Improve readability */
+    max-width: 80%; /* Limit text width for better readability */
+    margin: 0 auto; /* Center text */
+}
+.sections {
+    display: flex; /* Enables side-by-side layout */
+    justify-content: space-around; /* Spaces sections evenly */
+    padding: 20px;
+}
+/* Individual Section Styling */
+.section {
+    width: 45%; /* Sets equal width for both sections */
+    padding: 20px;
+    border: 1px solid #4DA1A9; /* Subtle border in teal */
+    background-color: #F6F4F0; /* Soft light background for readability */
+}
+/* Footer Styling */
+footer {
+    background-color: #2E5077; /* Matches nav bar */
+    color: #F6F4F0; /* Soft light text for contrast */
+    padding: 10px;
+    position: relative;
+}
+        </style>
