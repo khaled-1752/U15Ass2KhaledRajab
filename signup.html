@@ -5,77 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures the webpage is responsive on all devices -->
     <title>Event Sign-Up Form</title> <!-- Sets the title of the webpage -->
     <link href="/css/style.css" rel="stylesheet" /> <!-- Links an external CSS file for styling -->
-    <style>
-        /* Reset and Default Styling */
-        body {
-            font-family: Arial, sans-serif; /* Sets the default font style */
-            margin: 0;
-            padding: 0;
-            text-align: center; /* Centers text globally */
-            background-color: #f9f9f9; /* Light background for better readability */
-        }
-
-        /* Form Container Styling */
-        .form-container {
-            background-color: #ffffff; /* White background for the form */
-            width: 100%;
-            max-width: 500px; /* Restricts the maximum width of the form */
-            margin: 50px auto; /* Centers the form */
-            padding: 20px;
-            border: 1px solid #ddd; /* Adds a subtle border */
-            border-radius: 10px; /* Rounds the corners of the form */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-        }
-        h2 {
-            color: #2E5077; /* Sets the heading text color */
-            margin-bottom: 20px;
-        }
-        label {
-            display: block; /* Ensures labels are block-level for proper alignment */
-            text-align: left;
-            font-weight: bold;
-            margin-bottom: 5px;
-            color: #4DA1A9; /* Teal color for labels */
-        }
-        input, select, textarea, button {
-            width: 100%; /* Makes the input fields and buttons span the full width */
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd; /* Adds a subtle border */
-            border-radius: 5px; /* Rounds the corners */
-            font-size: 14px;
-            font-family: inherit; /* Inherits font style from parent */
-        }
-        input:focus, select:focus, textarea:focus {
-            outline: none; /* Removes the default focus outline */
-            border-color: #2E5077; /* Changes the border color when focused */
-            box-shadow: 0 0 5px #2E5077; /* Adds a subtle glow when focused */
-        }
-        button {
-            background-color: #2E5077; /* Sets the background color of the button */
-            color: #fff; /* Sets the text color to white */
-            border: none; /* Removes the default button border */
-            cursor: pointer; /* Changes cursor to pointer on hover */
-        }
-        button:hover {
-            background-color: #4DA1A9; /* Changes button color on hover */
-        }
-    </style>
 </head>
 <body>
+    <!-- Header Section -->
+    <header>
+        <img src="/images/logo.png" alt="Slovenske Vzdelavacie Centrum Logo" class="logo" /> <!-- Website logo -->
+        <h1 class="header-title">Slovenske Vzdelavacie Centrum</h1> <!-- Website title -->
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Homepage</a> <!-- Navigation link to Homepage -->
+        <a href="aboutus.html">About Us</a> <!-- Navigation link to About Us page -->
+        <a href="courses.html">Courses</a> <!-- Navigation link to Courses page -->
+        <a href="dates.html">Dates</a> <!-- Navigation link to Dates page -->
+        <a href="educationgames.html">Education Games</a> <!-- Navigation link to Education Games page -->
+        <a href="members.html">Members</a> <!-- Navigation link to Members page -->
+    </nav>
+
     <!-- Form Container -->
     <div class="form-container">
         <h2>Sign Up for an Event</h2> <!-- Main heading for the form -->
-        <form action="/submit_form" method="POST"> <!-- Submits form data to a server -->
-            <!-- Name Field -->
+        <form action="/submit_form" method="POST"> <!-- Form submission -->
+            <!-- Name Input -->
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" placeholder="Enter your full name" required />
 
-            <!-- Email Field -->
+            <!-- Email Input -->
             <label for="email">Email Address:</label>
             <input type="email" id="email" name="email" placeholder="Enter your email address" required />
 
-            <!-- Phone Field -->
+            <!-- Phone Input -->
             <label for="phone">Phone Number:</label>
             <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" />
 
@@ -90,7 +50,7 @@
                 <option value="fundraising-gala">Fundraising Gala</option>
             </select>
 
-            <!-- Additional Comments -->
+            <!-- Comments Section -->
             <label for="comments">Comments (Optional):</label>
             <textarea id="comments" name="comments" placeholder="Add any additional comments or requests" rows="4"></textarea>
 
@@ -101,7 +61,7 @@
 </body>
 </html>
 <style>
-  /* Reset default margin and padding for a consistent layout */
+    /* Reset default margin and padding for a consistent layout */
 body {
     font-family: Arial, sans-serif; /* Sets the default font style */
     margin: 0;
