@@ -147,10 +147,45 @@
         </section>
     </main>
 
-    <!-- Sign-Up Form Section -->
-    <section class="content"> <!-- Declares a section for the sign-up form -->
-        <h2>Sign Up</h2> <!-- Subheading for the sign-up form -->
-        <p>If you're interested in joining us, please fill out the form below to become a member and support our mission.</p> <!-- Provides context -->
+<!-- Sign-Up Form Section -->
+<section class="content" role="form"> <!-- Declares the section for the sign-up form with a semantic role -->
+    <h2>Sign Up</h2> <!-- Subheading for the sign-up form -->
+    <p>If you're interested in joining us, please fill out the form below to become a member and support our mission.</p> <!-- Context for the form -->
+    <form action="/submit_form" method="POST" class="signup-form" aria-label="Membership Sign-up"> <!-- Starts the sign-up form -->
+        <fieldset> <!-- Groups form fields for better structure -->
+            <legend>Membership Information</legend> <!-- Describes the purpose of the form -->
+            
+            <!-- Name Input Field -->
+            <label for="name">Full Name:</label> <!-- Label for the Name input -->
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required aria-label="Full Name" /> <!-- Text input for Name -->
+
+            <!-- Email Input Field -->
+            <label for="email">Email Address:</label> <!-- Label for the Email input -->
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required aria-label="Email Address" /> <!-- Email input -->
+
+            <!-- Phone Number Input Field -->
+            <label for="phone">Phone Number:</label> <!-- Label for the Phone Number input -->
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" aria-label="Phone Number" /> <!-- Phone number input -->
+
+            <!-- Message Textarea -->
+            <label for="message">Message (Optional):</label> <!-- Label for the Message field -->
+            <textarea id="message" name="message" placeholder="Share why you'd like to join" aria-label="Optional Message"></textarea> <!-- Textarea for optional user message -->
+
+            <!-- Membership Type Dropdown -->
+            <label for="membership-type">Membership Type:</label> <!-- Label for Membership Type dropdown -->
+            <select id="membership-type" name="membership-type" required aria-label="Membership Type"> <!-- Dropdown selection -->
+                <option value="">Select a membership type</option>
+                <option value="student">Student</option>
+                <option value="professional">Professional</option>
+                <option value="supporter">Supporter</option>
+            </select>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-button">Submit</button> <!-- Button for submitting the form -->
+        </fieldset>
+    </form>
+</section>
+
         <style>
             /* Reset default margin and padding for a consistent layout */
 body {
