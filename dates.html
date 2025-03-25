@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- Specifies the document type and language -->
+<html lang="en"> <!-- Declares the document type and sets the language of the webpage -->
 <head>
     <!-- Metadata for the webpage -->
     <meta charset="UTF-8" /> <!-- Sets the character encoding to support all characters -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures the page is responsive -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Improves compatibility with older IE browsers -->
-    <title>Dates</title> <!-- Sets the title displayed in the browser tab -->
-    <link href="css/style.css" rel="stylesheet" /> <!-- Links the external CSS file -->
+    <meta name="description" content="Explore our charity-focused courses and learning materials." /> <!-- Provides a description for search engines (SEO) -->
+    <title>Dates</title> <!-- Specifies the title of the webpage, shown in the browser tab -->
+    <link href="css/style.css" rel="stylesheet" /> <!-- Links the external CSS file for styling -->
     <script src="scripts/javascript.js" defer></script> <!-- Links the external JavaScript file and defers loading -->
 </head>
 <body>
-    <!-- Header Section -->
+    <!-- Header Section with Logo -->
     <header role="banner" class="site-header"> <!-- Provides a banner role for accessibility -->
         <img src="images/logo.png" alt="Logo" class="logo" /> <!-- Displays the logo with descriptive alt text -->
         
@@ -27,25 +27,35 @@
 
     <!-- Main Content Section -->
     <main> <!-- Main section for primary content -->
-        <h2>Our Events</h2> <!-- Secondary heading for the page -->
-        <p>Select an event from the dropdown menu and click "Enroll" to join us!</p> <!-- Instructional text -->
-        
-        <!-- Dropdown Menu Container -->
-        <div class="dropdown-container"> <!-- Wraps the dropdown menu for styling -->
-            <label for="events">Choose an event:</label> <!-- Label for accessibility -->
-            <select id="events" name="events" aria-label="Event selection"> <!-- Dropdown menu for event selection -->
-                <option value="tree-planting">Tree Planting Drive - 10th June 2025</option>
-                <option value="food-donation">Food Donation Camp - 15th July 2025</option>
-                <option value="charity-run">Charity Fun Run - 20th August 2025</option>
-                <option value="volunteer-workshop">Workshop on Volunteering - 5th September 2025</option>
-                <option value="fundraising-gala">Fundraising Gala - 10th October 2025</option>
-            </select>
-        </div>
+        <h2>Charity-Focused Courses</h2> <!-- Secondary heading for the page -->
+        <p>Empower your journey in giving back to the community with our specialized charity courses.</p> <!-- Instructional text -->
 
-        <!-- Enroll Button -->
-        <button class="enroll-button" onclick="location.href='signup.html'" aria-label="Enroll in event">
-            Enroll <!-- Text for the button -->
-        </button>
+        <!-- Charity Courses Section -->
+        <div class="courses"> <!-- Wraps the courses for styling -->
+            <!-- Course 1 -->
+            <div class="course-card">
+                <img src="images/fundraising.jpg" alt="Fundraising 101" class="course-img" /> <!-- Course image -->
+                <h3>Fundraising 101</h3> <!-- Course title -->
+                <p>Discover effective strategies for organizing successful fundraisers and engaging donors.</p> <!-- Course description -->
+                <button class="enroll-button" onclick="window.location.href='coursesignup.html'">Enroll Now</button> <!-- Enroll button -->
+            </div>
+
+            <!-- Course 2 -->
+            <div class="course-card">
+                <img src="images/volunteer.jpg" alt="Volunteer Management" class="course-img" /> <!-- Course image -->
+                <h3>Volunteer Management</h3> <!-- Course title -->
+                <p>Learn how to recruit, train, and inspire volunteers to create impactful change.</p> <!-- Course description -->
+                <button class="enroll-button" onclick="window.location.href='coursesignup.html'">Enroll Now</button> <!-- Enroll button -->
+            </div>
+
+            <!-- Course 3 -->
+            <div class="course-card">
+                <img src="images/impact.png" alt="Social Impact Measurement" class="course-img" /> <!-- Course image -->
+                <h3>Social Impact Measurement</h3> <!-- Course title -->
+                <p>Gain the skills to assess and communicate the impact of your charitable initiatives.</p> <!-- Course description -->
+                <button class="enroll-button" onclick="window.location.href='coursesignup.html'">Enroll Now</button> <!-- Enroll button -->
+            </div>
+        </div>
     </main>
 
     <!-- Footer Section -->
@@ -105,15 +115,33 @@ main {
     padding: 20px;
     text-align: center; /* Center text for main content */
 }
-.dropdown-container {
-    margin: 20px 0; /* Add margin above and below the dropdown */
+/* Charity Courses Section Styling */
+.courses {
+    display: flex; /* Display courses horizontally */
+    justify-content: space-around; /* Space courses evenly */
+    flex-wrap: wrap; /* Allow courses to wrap to the next line if necessary */
 }
-.dropdown-container select {
-    padding: 10px; /* Add padding inside the dropdown */
-    border-radius: 5px; /* Rounded corners */
-    border: 2px solid #2E5077; /* Dark blue-gray border */
-    font-size: 16px; /* Adjust font size */
+.course-card {
     background-color: #F6F4F0; /* Soft light background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border: 2px solid #2E5077; /* Dark blue-gray border */
+    margin: 20px;
+    text-align: left;
+    width: 30%; /* Set width of course cards */
+    max-width: 300px; /* Set maximum width of course cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition effects */
+}
+.course-card:hover {
+    transform: translateY(-5px); /* Move card up slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+.course-img {
+    width: 100%; /* Set width of images */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px 0; /* Add margin around images */
+    border-radius: 10px; /* Rounded corners for images */
 }
 .enroll-button {
     background-color: #2E5077; /* Dark blue background */
