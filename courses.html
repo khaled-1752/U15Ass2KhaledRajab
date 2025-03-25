@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures the webpage is responsive on mobile devices -->
     <meta name="description" content="Explore our charity-focused courses and learning materials." /> <!-- Provides a description for search engines (SEO) -->
     <title>Charity Courses</title> <!-- Specifies the title of the webpage, shown in the browser tab -->
-    <link href="/css/style.css" rel="stylesheet" /> <!-- Links to an external CSS file for styling -->
-    <script src="/scripts/javascript.js" defer></script> <!-- Links to an external JavaScript file, set to load after the HTML -->
+    <link href="css/style.css" rel="stylesheet" /> <!-- Links to an external CSS file for styling -->
+    <script src="scripts/javascript.js" defer></script> <!-- Links to an external JavaScript file, set to load after the HTML -->
 </head>
 <body>
     <!-- Header Section with Logo -->
@@ -34,6 +34,7 @@
         <div class="courses">
             <!-- Course 1 -->
             <div class="course-card">
+                <img src="images/fundraising.jpg" alt="Fundraising 101" class="course-img" /> <!-- Course image -->
                 <h3>Fundraising 101</h3>
                 <p>Discover effective strategies for organizing successful fundraisers and engaging donors.</p>
                 <button class="enroll-button" onclick="window.location.href='signup.html'">Enroll Now</button>
@@ -41,6 +42,7 @@
 
             <!-- Course 2 -->
             <div class="course-card">
+                <img src="images/volunteer.jpg" alt="Volunteer Management" class="course-img" /> <!-- Course image -->
                 <h3>Volunteer Management</h3>
                 <p>Learn how to recruit, train, and inspire volunteers to create impactful change.</p>
                 <button class="enroll-button" onclick="window.location.href='signup.html'">Enroll Now</button>
@@ -48,6 +50,7 @@
 
             <!-- Course 3 -->
             <div class="course-card">
+                <img src="images/impact.jpg" alt="Social Impact Measurement" class="course-img" /> <!-- Course image -->
                 <h3>Social Impact Measurement</h3>
                 <p>Gain the skills to assess and communicate the impact of your charitable initiatives.</p>
                 <button class="enroll-button" onclick="window.location.href='signup.html'">Enroll Now</button>
@@ -165,6 +168,18 @@ nav a:hover {
     border: 2px solid #2E5077; /* Dark blue-gray border */
     margin: 20px;
     text-align: left;
+}
+.course-img {
+    width: 100%; /* Set width of images */
+    max-width: 200px; /* Set maximum width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px 0; /* Add margin around images */
+    border-radius: 10px; /* Rounded corners for images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition effects */
+}
+.course-img:hover {
+    transform: translateY(-5px); /* Move image up slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }
 .enroll-button {
     background-color: #2E5077; /* Dark blue background */
