@@ -124,13 +124,14 @@ header {
 .image-container {
     display: flex; /* Display images horizontally */
     justify-content: space-around; /* Space images evenly */
-    flex-wrap: wrap; /* Allow images to wrap to the next line if necessary */
+    flex-wrap: nowrap; /* Do not allow images to wrap to the next line */
     padding: 20px 0; /* Add padding above and below the images */
+    overflow-x: auto; /* Enable horizontal scrolling if necessary */
 }
 .about-img {
-    width: 30%; /* Set width of images */
+    width: auto; /* Maintain image width */
     max-width: 200px; /* Set maximum width */
-    height: auto; /* Maintain aspect ratio */
+    height: 100px; /* Set fixed height */
     margin: 10px; /* Add margin around images */
     border-radius: 10px; /* Rounded corners for images */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition effects */
