@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en"> <!-- Declares the document type and sets the language of the webpage -->
 <head>
-    <meta charset="UTF-8" /> <!-- Sets the character encoding of the document to UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures the webpage is responsive on all screen sizes -->
+    <meta charset="UTF-8" /> <!-- Sets the character encoding for the document to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures the webpage is responsive on mobile devices -->
     <title>Education Games</title> <!-- Sets the title of the webpage, shown on the browser tab -->
     <link href="/css/style.css" rel="stylesheet" /> <!-- Links an external CSS file for styling -->
     <script src="/scripts/javascript.js" defer></script> <!-- Links an external JavaScript file and ensures it executes after the HTML is fully parsed -->
@@ -29,6 +29,36 @@
         <section> <!-- Groups related content into a semantic section -->
             <h2>Welcome to Our Education Games</h2> <!-- Main heading for the section -->
             <p>Discover our interactive and engaging educational games designed to make learning fun!</p> <!-- Short description introducing the section -->
+        </section>
+
+        <!-- Fun Games Section -->
+        <section class="games-section">
+            <h2>Our Fun Educational Games</h2>
+            <div class="games">
+                <!-- Game 1 -->
+                <div class="game-card">
+                    <img src="images/game1.jpg" alt="Math Challenge" class="game-img">
+                    <h3>Math Challenge</h3>
+                    <p>Sharpen your math skills with exciting puzzles and challenges.</p>
+                    <button class="enroll-button" onclick="window.location.href='games.html'">Play Now</button>
+                </div>
+
+                <!-- Game 2 -->
+                <div class="game-card">
+                    <img src="images/game2.jpg" alt="Science Quiz" class="game-img">
+                    <h3>Science Quiz</h3>
+                    <p>Test your knowledge with our interactive science quizzes.</p>
+                    <button class="enroll-button" onclick="window.location.href='games.html'">Play Now</button>
+                </div>
+
+                <!-- Game 3 -->
+                <div class="game-card">
+                    <img src="images/game3.jpg" alt="Word Search" class="game-img">
+                    <h3>Word Search</h3>
+                    <p>Improve your vocabulary with fun word search puzzles.</p>
+                    <button class="enroll-button" onclick="window.location.href='games.html'">Play Now</button>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -122,6 +152,62 @@ nav a:hover {
     padding: 20px;
     border: 1px solid #4DA1A9; /* Subtle border in teal */
     background-color: #F6F4F0; /* Soft light background for readability */
+}
+/* Games Section Styling */
+.games-section {
+    background-color: #F6F4F0; /* Soft light background */
+    padding: 20px; /* Add padding inside the section */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center text */
+    width: 80%; /* Limit section width for better readability */
+    margin: 20px auto; /* Center horizontally with some margin */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border: 2px solid #2E5077; /* Dark blue-gray border */
+}
+.games-section h2 {
+    color: #2E5077; /* Dark blue-gray color for heading */
+    font-size: 24px; /* Adjust font size */
+}
+.games {
+    display: flex; /* Display games horizontally */
+    justify-content: space-around; /* Space games evenly */
+    flex-wrap: wrap; /* Allow games to wrap to the next line if necessary */
+    padding: 20px 0; /* Add padding above and below the games */
+}
+.game-card {
+    background-color: #F6F4F0; /* Soft light background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border: 2px solid #2E5077; /* Dark blue-gray border */
+    margin: 20px;
+    text-align: left;
+    width: 30%; /* Set width of game cards */
+    max-width: 300px; /* Set maximum width of game cards */
+}
+.game-img {
+    width: 100%; /* Set width of images */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px 0; /* Add margin around images */
+    border-radius: 10px; /* Rounded corners for images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition effects */
+}
+.game-img:hover {
+    transform: translateY(-5px); /* Move image up slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+.enroll-button {
+    background-color: #2E5077; /* Dark blue background */
+    color: #F6F4F0; /* Light text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition effects */
+}
+.enroll-button:hover {
+    background-color: #4DA1A9; /* Change background color on hover */
+    transform: translateY(-3px); /* Move button up slightly on hover */
 }
 /* Footer Styling */
 footer {
