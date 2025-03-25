@@ -1,1 +1,168 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Specifies the document type and language -->
+<head>
+    <!-- Metadata for the webpage -->
+    <meta charset="UTF-8" /> <!-- Sets the character encoding to support all characters -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures the page is responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Improves compatibility with older IE browsers -->
+    <title>Course Sign Up</title> <!-- Sets the title displayed in the browser tab -->
+    <link href="css/style.css" rel="stylesheet" /> <!-- Links the external CSS file -->
+    <script src="scripts/javascript.js" defer></script> <!-- Links the external JavaScript file and defers loading -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header role="banner" class="site-header"> <!-- Provides a banner role for accessibility -->
+        <h1>Slovenske Vzdelavacie Centrum</h1> <!-- Displays the main title of the webpage -->
+        <img src="images/logo.png" alt="Logo" class="logo" /> <!-- Displays the logo with descriptive alt text -->
+    </header>
 
+    <!-- Navigation Bar -->
+    <nav role="navigation" class="navbar"> <!-- Provides a navigation role for accessibility -->
+        <a href="index.html">Homepage</a> <!-- Link to Homepage -->
+        <a href="aboutus.html">About Us</a> <!-- Link to About Us -->
+        <a href="courses.html">Courses</a> <!-- Link to Courses -->
+        <a href="dates.html">Dates</a> <!-- Link to Dates -->
+        <a href="educationgames.html">Education Games</a> <!-- Link to Education Games -->
+        <a href="members.html">Members</a> <!-- Link to Members -->
+    </nav>
+
+    <!-- Main Content Section -->
+    <main class="mainpage" role="main"> <!-- Declares the main section and assigns it a role for accessibility -->
+        <section class="signup-section">
+            <h2>Sign Up for Charity Courses</h2> <!-- Main heading for the section -->
+            <form action="/submit_signup" method="POST">
+                <!-- Name Field -->
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required />
+
+                <!-- Email Field -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+                <!-- Phone Field -->
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" />
+
+                <!-- Dropdown for Course Selection -->
+                <label for="course">Select a Course:</label>
+                <select id="course" name="course" required>
+                    <option value="">Choose a course</option>
+                    <option value="Fundraising-101">Fundraising 101</option>
+                    <option value="Volunteer-Management">Volunteer Management</option>
+                    <option value="Social-Impact-Measurement">Social Impact Measurement</option>
+                </select>
+
+                <!-- Additional Comments -->
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Enter any additional comments"></textarea>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-button">Sign Up</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer role="contentinfo"> <!-- Declares the footer as a contentinfo role for accessibility -->
+        <p>&copy; 2025 Slovenske Vzdelavacie Centrum. All rights reserved.</p> <!-- Copyright text -->
+    </footer>
+</body>
+</html>
+
+<style>
+/* Reset default margin and padding for a consistent layout */
+body {
+    font-family: Arial, sans-serif; /* Sets the default font style */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centers text globally */
+    color: black; /* Sets the default font color to black */
+}
+/* Header Styling */
+header {
+    display: flex; /* Uses flexbox for layout */
+    justify-content: space-between; /* Pushes content to opposite sides */
+    align-items: center; /* Aligns items vertically */
+    padding: 20px;
+    background-color: #F6F4F0; /* Soft light background */
+    border-bottom: 2px solid #4DA1A9; /* Subtle bottom border in teal */
+}
+/* Logo Styling */
+.logo {
+    max-width: 100px; /* Restricts logo size */
+}
+/* Navigation Bar Styling */
+nav {
+    background-color: #2E5077; /* Dark blue background for contrast */
+    padding: 10px;
+}
+nav a {
+    color: #F6F4F0; /* Soft light text for contrast */
+    text-decoration: none; /* Removes underline from links */
+    margin: 0 10px; /* Adds spacing between links */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Add transition effects */
+}
+nav a:hover {
+    color: #2E5077; /* Change text color on hover */
+    background-color: #F6F4F0; /* Change background color on hover */
+    padding: 10px; /* Add padding on hover */
+    border-radius: 5px; /* Add rounded corners on hover */
+}
+/* Main Content Section Styling */
+.mainpage {
+    padding: 20px;
+    text-align: left; /* Align text to the left for better readability */
+}
+.signup-section {
+    background-color: #79D7BE; /* Light teal background */
+    padding: 20px; /* Add space inside the main section */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border: 2px solid #2E5077; /* Dark blue-gray border */
+    width: 80%; /* Limit section width for better readability */
+    max-width: 600px; /* Ensure it doesn't exceed the viewport */
+    margin: 20px auto; /* Center horizontally with some margin */
+}
+.signup-section h2 {
+    color: #2E5077; /* Dark blue-gray color for heading */
+    font-size: 24px; /* Adjust font size */
+}
+.signup-section form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+.signup-section form label,
+.signup-section form input,
+.signup-section form textarea,
+.signup-section form select,
+.signup-section form button {
+    flex: 1 1 45%;
+    margin-bottom: 10px;
+}
+.signup-section form textarea {
+    flex: 1 1 100%;
+}
+.signup-section form button {
+    flex: 1 1 100%;
+    background-color: #2E5077;
+    color: #F6F4F0;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition effects */
+}
+.signup-section form button:hover {
+    background-color: #4DA1A9; /* Change background color on hover */
+    transform: translateY(-3px); /* Move button up slightly on hover */
+}
+/* Footer Styling */
+footer {
+    background-color: #2E5077; /* Matches nav bar */
+    color: #F6F4F0; /* Soft light text for contrast */
+    padding: 10px;
+    position: relative;
+    text-align: center; /* Center text in the footer */
+}
+</style>
