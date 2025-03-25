@@ -13,17 +13,17 @@
     <header role="banner" class="site-header"> <!-- Defines a banner role for accessibility -->
         <h1>Slovenske Vzdelavacie Centrum</h1> <!-- Displays the website's main title -->
         <img src="images/logo.png" alt="Logo" class="logo" /> <!-- Displays the site logo with a descriptive alt text -->
+        
+        <!-- Navigation Bar -->
+        <nav role="navigation" class="navbar"> <!-- Adds navigation role for accessibility -->
+            <a href="index.html">Homepage</a> <!-- Navigation link to the Homepage -->
+            <a href="aboutus.html">About Us</a> <!-- Navigation link to the About Us page -->
+            <a href="courses.html">Courses</a> <!-- Navigation link to the Courses page -->
+            <a href="dates.html">Dates</a> <!-- Navigation link to the Dates page -->
+            <a href="educationgames.html">Education Games</a> <!-- Navigation link to the Education Games page -->
+            <a href="members.html">Members</a> <!-- Navigation link to the Members page -->
+        </nav>
     </header>
-
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="index.html">Homepage</a>
-        <a href="aboutus.html">About Us</a>
-        <a href="courses.html">Courses</a>
-        <a href="dates.html">Dates</a>
-        <a href="educationgames.html">Education Games</a>
-        <a href="members.html">Members</a>
-    </nav>
 
     <!-- Main Content Section -->
     <main class="mainpage" role="main"> <!-- Declares the main section and assigns it a role for accessibility -->
@@ -71,23 +71,28 @@ header {
     padding: 20px;
     background-color: #F6F4F0; /* Soft light background */
     border-bottom: 2px solid #4DA1A9; /* Subtle bottom border in teal */
+    position: relative; /* Set position for absolute positioning of nav */
 } 
 /* Logo Styling */
 .logo {
     max-width: 100px; /* Restricts logo size */
 } 
 /* Navigation Bar Styling */
-nav {
+.navbar {
+    position: absolute; /* Position navigation absolutely within the header */
+    top: 20px; /* Align navigation to the top */
+    right: 20px; /* Align navigation to the right */
     background-color: #2E5077; /* Dark blue background for contrast */
     padding: 10px;
+    border-radius: 5px; /* Add rounded corners */
 }
-nav a {
+.navbar a {
     color: #F6F4F0; /* Soft light text for contrast */
     text-decoration: none; /* Removes underline from links */
     margin: 0 10px; /* Adds spacing between links */
     transition: color 0.3s ease, background-color 0.3s ease; /* Add transition effects */
 }
-nav a:hover {
+.navbar a:hover {
     color: #2E5077; /* Change text color on hover */
     background-color: #F6F4F0; /* Change background color on hover */
     padding: 10px; /* Add padding on hover */
