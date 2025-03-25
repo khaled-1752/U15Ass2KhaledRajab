@@ -25,17 +25,29 @@
  
     <!-- Main Content Area with Two Sections -->
     <main role="main"> <!-- Adds main role for accessibility -->
-        <h2>Welcome to Our Website</h2> <!-- Main heading for content section -->
-        <p>On this page, you will find information about our charity and our goals in this organization.</p> <!-- Enhanced readability -->
+        <h2>Welcome to Slovenske Vzdelavacie Centrum</h2> <!-- Main heading for content section -->
+        <p>Welcome to our charity organization! We are dedicated to providing educational resources and support to our community. On this website, you will find information about our mission, the courses we offer, important dates, and educational games for all ages.</p> <!-- Enhanced readability -->
         
-        <div class="sections"> <!-- Container to hold two sections side by side -->
+        <div class="sections"> <!-- Container to hold sections side by side -->
             <section class="section"> <!-- First section -->
                 <h3>Our Mission</h3> <!-- Improved heading -->
+                <img src="images/mission.jpg" alt="Our Mission" class="section-img" /> <!-- Image supporting mission -->
                 <p>Learn about our mission and how we aim to make a difference in our community.</p> <!-- Updated content -->
             </section>
             <section class="section"> <!-- Second section -->
                 <h3>Our Impact</h3> <!-- Improved heading -->
+                <img src="images/impact.jpg" alt="Our Impact" class="section-img" /> <!-- Image supporting impact -->
                 <p>Discover the impact our initiatives have had and how we are helping the community thrive.</p> <!-- Updated content -->
+            </section>
+            <section class="section"> <!-- Third section -->
+                <h3>Courses We Offer</h3> <!-- Improved heading -->
+                <img src="images/courses.jpg" alt="Our Courses" class="section-img" /> <!-- Image supporting courses -->
+                <p>Explore the range of courses we offer to empower individuals with knowledge and skills.</p> <!-- Updated content -->
+            </section>
+            <section class="section"> <!-- Fourth section -->
+                <h3>Educational Games</h3> <!-- Improved heading -->
+                <img src="images/games.jpg" alt="Educational Games" class="section-img" /> <!-- Image supporting educational games -->
+                <p>Engage with our fun and educational games designed for all ages to enhance learning.</p> <!-- Updated content -->
             </section>
         </div>
     </main>
@@ -46,3 +58,83 @@
     </footer>
 </body>
 </html>
+
+<style>
+/* Reset default margin and padding for a consistent layout */
+body {
+    font-family: Arial, sans-serif; /* Sets the default font style */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centers text globally */
+    color: black; /* Sets the default font color to black */
+} 
+/* Header Styling */
+header {
+    display: flex; /* Uses flexbox for layout */
+    justify-content: space-between; /* Pushes content to opposite sides */
+    align-items: center; /* Aligns items vertically */
+    padding: 20px;
+    background-color: #F6F4F0; /* Soft light background */
+    border-bottom: 2px solid #4DA1A9; /* Subtle bottom border in teal */
+} 
+/* Logo Styling */
+.logo {
+    max-width: 100px; /* Restricts logo size */
+} 
+/* Navigation Bar Styling */
+nav {
+    background-color: #2E5077; /* Dark blue background for contrast */
+    padding: 10px;
+}
+nav a {
+    color: #F6F4F0; /* Soft light text for contrast */
+    text-decoration: none; /* Removes underline from links */
+    margin: 0 10px; /* Adds spacing between links */
+} 
+/* Main Content Section Styling */
+main {
+    padding: 20px;
+    text-align: left; /* Align text to the left for better readability */
+}
+.sections {
+    display: flex; /* Enables side-by-side layout */
+    flex-wrap: wrap; /* Allows sections to wrap to the next line if necessary */
+    justify-content: space-around; /* Spaces sections evenly */
+    padding: 20px;
+}
+/* Individual Section Styling */
+.section {
+    width: 45%; /* Sets equal width for sections */
+    padding: 20px;
+    margin: 10px 0; /* Adds margin between sections */
+    border: 2px solid #4DA1A9; /* Subtle border in teal */
+    background-color: #F6F4F0; /* Soft light background for readability */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    text-align: center; /* Center text in sections */
+}
+.section h3 {
+    color: #2E5077; /* Dark blue-gray color for heading */
+    font-size: 20px; /* Adjust font size */
+}
+.section p {
+    color: black; /* Sets the paragraph text color to black */
+    font-size: 16px; /* Adjust font size */
+    line-height: 1.5; /* Improve readability */
+}
+.section-img {
+    width: 100%; /* Make images responsive */
+    max-width: 300px; /* Set a maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for images */
+    margin: 10px 0; /* Add margin above and below images */
+}
+/* Footer Styling */
+footer {
+    background-color: #2E5077; /* Matches nav bar */
+    color: #F6F4F0; /* Soft light text for contrast */
+    padding: 10px;
+    position: relative;
+    text-align: center; /* Center text in the footer */
+}
+</style>
