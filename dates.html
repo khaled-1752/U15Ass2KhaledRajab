@@ -5,26 +5,25 @@
     <meta charset="UTF-8" /> <!-- Sets the character encoding to support all characters -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures the page is responsive -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Improves compatibility with older IE browsers -->
-    <title>Events Dropdown</title> <!-- Sets the title displayed in the browser tab -->
-    <link href="/css/style.css" rel="stylesheet" /> <!-- Links the external CSS file -->
-    <script src="/scripts/javascript.js" defer></script> <!-- Links the external JavaScript file and defers loading -->
+    <title>Dates</title> <!-- Sets the title displayed in the browser tab -->
+    <link href="css/style.css" rel="stylesheet" /> <!-- Links the external CSS file -->
+    <script src="scripts/javascript.js" defer></script> <!-- Links the external JavaScript file and defers loading -->
 </head>
 <body>
     <!-- Header Section -->
     <header role="banner" class="site-header"> <!-- Provides a banner role for accessibility -->
-        <h1>Slovenske Vzdelavacie Centrum</h1> <!-- Displays the main title of the webpage -->
         <img src="images/logo.png" alt="Logo" class="logo" /> <!-- Displays the logo with descriptive alt text -->
+        
+        <!-- Navigation Bar -->
+        <nav role="navigation" class="navbar"> <!-- Provides a navigation role for accessibility -->
+            <a href="index.html">Homepage</a> <!-- Link to Homepage -->
+            <a href="aboutus.html">About Us</a> <!-- Link to About Us -->
+            <a href="courses.html">Courses</a> <!-- Link to Courses -->
+            <a href="dates.html">Dates</a> <!-- Link to Dates -->
+            <a href="educationgames.html">Education Games</a> <!-- Link to Education Games -->
+            <a href="members.html">Members</a> <!-- Link to Members -->
+        </nav>
     </header>
-
-    <!-- Navigation Bar -->
-    <nav role="navigation" class="navbar"> <!-- Provides a navigation role for accessibility -->
-        <a href="index.html">Homepage</a> <!-- Link to Homepage -->
-        <a href="aboutus.html">About Us</a> <!-- Link to About Us -->
-        <a href="courses.html">Courses</a> <!-- Link to Courses -->
-        <a href="dates.html">Dates</a> <!-- Link to Dates -->
-        <a href="educationgames.html">Education Games</a> <!-- Link to Education Games -->
-        <a href="members.html">Members</a> <!-- Link to Members -->
-    </nav>
 
     <!-- Main Content Section -->
     <main> <!-- Main section for primary content -->
@@ -50,7 +49,7 @@
     </main>
 
     <!-- Footer Section -->
-    <footer> <!-- Footer area for copyright information -->
+    <footer role="contentinfo"> <!-- Declares the footer as a contentinfo role for accessibility -->
         <p>&copy; 2025 Slovenske Vzdelavacie Centrum. All rights reserved.</p> <!-- Copyright text -->
     </footer>
 </body>
@@ -64,32 +63,38 @@ body {
     padding: 0;
     text-align: center; /* Centers text globally */
     color: black; /* Sets the default font color to black */
-} 
+}
 /* Header Styling */
 header {
     display: flex; /* Uses flexbox for layout */
-    justify-content: space-between; /* Pushes content to opposite sides */
+    justify-content: flex-start; /* Align items to start */
     align-items: center; /* Aligns items vertically */
     padding: 20px;
-    background-color: #F6F4F0; /* Soft light background */
+    background-color: #2E5077; /* Matches nav bar color */
     border-bottom: 2px solid #4DA1A9; /* Subtle bottom border in teal */
+    position: relative; /* Set position for absolute positioning of nav */
 } 
 /* Logo Styling */
 .logo {
     max-width: 100px; /* Restricts logo size */
+    margin-right: 20px; /* Adds space between logo and nav */
 } 
 /* Navigation Bar Styling */
-nav {
+.navbar {
+    position: absolute; /* Position navigation absolutely within the header */
+    top: 20px; /* Align navigation to the top */
+    right: 20px; /* Align navigation to the right */
     background-color: #2E5077; /* Dark blue background for contrast */
     padding: 10px;
+    border-radius: 5px; /* Add rounded corners */
 }
-nav a {
+.navbar a {
     color: #F6F4F0; /* Soft light text for contrast */
     text-decoration: none; /* Removes underline from links */
     margin: 0 10px; /* Adds spacing between links */
     transition: color 0.3s ease, background-color 0.3s ease; /* Add transition effects */
 }
-nav a:hover {
+.navbar a:hover {
     color: #2E5077; /* Change text color on hover */
     background-color: #F6F4F0; /* Change background color on hover */
     padding: 10px; /* Add padding on hover */
