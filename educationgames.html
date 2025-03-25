@@ -44,13 +44,15 @@
     </footer>
 </body>
 </html>
+
 <style>
-    /* Reset default margin and padding for a consistent layout */
+/* Reset default margin and padding for a consistent layout */
 body {
     font-family: Arial, sans-serif; /* Sets the default font style */
     margin: 0;
     padding: 0;
     text-align: center; /* Centers text globally */
+    color: black; /* Sets the default font color to black */
 } 
 /* Header Styling */
 header {
@@ -74,16 +76,27 @@ nav a {
     color: #F6F4F0; /* Soft light text for contrast */
     text-decoration: none; /* Removes underline from links */
     margin: 0 10px; /* Adds spacing between links */
-} 
+    transition: color 0.3s ease, background-color 0.3s ease; /* Add transition effects */
+}
+nav a:hover {
+    color: #2E5077; /* Change text color on hover */
+    background-color: #F6F4F0; /* Change background color on hover */
+    padding: 10px; /* Add padding on hover */
+    border-radius: 5px; /* Add rounded corners on hover */
+}
 /* Main Content Section Styling */
+.mainpage {
+    padding: 20px;
+    text-align: left; /* Align text to the left for better readability */
+}
 .content {
     background-color: #79D7BE; /* Light teal background */
     padding: 20px; /* Add space inside the main section */
     border-radius: 10px; /* Rounded corners */
     text-align: center; /* Center text */
-    width: 100%; /* Full width */
-    max-width: 100%; /* Ensure it doesn't exceed the viewport */
-    margin: 0 auto; /* Center horizontally */
+    width: 80%; /* Limit section width for better readability */
+    max-width: 80%; /* Ensure it doesn't exceed the viewport */
+    margin: 20px auto; /* Center horizontally with some margin */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
     border: 2px solid #2E5077; /* Dark blue-gray border */
 }
@@ -116,5 +129,6 @@ footer {
     color: #F6F4F0; /* Soft light text for contrast */
     padding: 10px;
     position: relative;
+    text-align: center; /* Center text in the footer */
 }
 </style>
