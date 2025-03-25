@@ -10,19 +10,18 @@
 <body>
     <!-- Header Section with Logo -->
     <header role="banner" class="site-header"> <!-- Defines a banner role for accessibility -->
-        <h1>Slovenske Vzdelavacie Centrum</h1> <!-- Displays the website's main title -->
         <img src="images/logo.png" alt="Logo" class="logo" /> <!-- Displays the site logo with a descriptive alt text -->
+        
+        <!-- Navigation Bar -->
+        <nav role="navigation" class="navbar"> <!-- Provides a navigation role for accessibility -->
+            <a href="index.html">Homepage</a> <!-- Link to Homepage -->
+            <a href="aboutus.html">About Us</a> <!-- Link to About Us -->
+            <a href="courses.html">Courses</a> <!-- Link to Courses -->
+            <a href="dates.html">Dates</a> <!-- Link to Dates -->
+            <a href="educationgames.html">Education Games</a> <!-- Link to Education Games -->
+            <a href="members.html">Members</a> <!-- Link to Members -->
+        </nav>
     </header>
-
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="index.html">Homepage</a>
-        <a href="aboutus.html">About Us</a>
-        <a href="courses.html">Courses</a>
-        <a href="dates.html">Dates</a>
-        <a href="educationgames.html">Education Games</a>
-        <a href="members.html">Members</a>
-    </nav>
 
     <!-- Main Content Section -->
     <main class="mainpage" role="main"> <!-- Declares the main section and assigns it a role for accessibility -->
@@ -79,28 +78,34 @@ body {
 /* Header Styling */
 header {
     display: flex; /* Uses flexbox for layout */
-    justify-content: space-between; /* Pushes content to opposite sides */
+    justify-content: flex-start; /* Align items to start */
     align-items: center; /* Aligns items vertically */
     padding: 20px;
-    background-color: #F6F4F0; /* Soft light background */
+    background-color: #2E5077; /* Matches nav bar color */
     border-bottom: 2px solid #4DA1A9; /* Subtle bottom border in teal */
+    position: relative; /* Set position for absolute positioning of nav */
 } 
 /* Logo Styling */
 .logo {
     max-width: 100px; /* Restricts logo size */
+    margin-right: 20px; /* Adds space between logo and nav */
 } 
 /* Navigation Bar Styling */
-nav {
+.navbar {
+    position: absolute; /* Position navigation absolutely within the header */
+    top: 20px; /* Align navigation to the top */
+    right: 20px; /* Align navigation to the right */
     background-color: #2E5077; /* Dark blue background for contrast */
     padding: 10px;
+    border-radius: 5px; /* Add rounded corners */
 }
-nav a {
+.navbar a {
     color: #F6F4F0; /* Soft light text for contrast */
     text-decoration: none; /* Removes underline from links */
     margin: 0 10px; /* Adds spacing between links */
     transition: color 0.3s ease, background-color 0.3s ease; /* Add transition effects */
 }
-nav a:hover {
+.navbar a:hover {
     color: #2E5077; /* Change text color on hover */
     background-color: #F6F4F0; /* Change background color on hover */
     padding: 10px; /* Add padding on hover */
