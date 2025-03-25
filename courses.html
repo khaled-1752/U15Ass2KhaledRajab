@@ -36,21 +36,21 @@
             <div class="course-card">
                 <h3>Fundraising 101</h3>
                 <p>Discover effective strategies for organizing successful fundraisers and engaging donors.</p>
-                <button onclick="window.location.href='signup.html'">Enroll Now</button>
+                <button class="enroll-button" onclick="window.location.href='signup.html'">Enroll Now</button>
             </div>
 
             <!-- Course 2 -->
             <div class="course-card">
                 <h3>Volunteer Management</h3>
                 <p>Learn how to recruit, train, and inspire volunteers to create impactful change.</p>
-                <button onclick="window.location.href='signup.html'">Enroll Now</button>
+                <button class="enroll-button" onclick="window.location.href='signup.html'">Enroll Now</button>
             </div>
 
             <!-- Course 3 -->
             <div class="course-card">
                 <h3>Social Impact Measurement</h3>
                 <p>Gain the skills to assess and communicate the impact of your charitable initiatives.</p>
-                <button onclick="window.location.href='signup.html'">Enroll Now</button>
+                <button class="enroll-button" onclick="window.location.href='signup.html'">Enroll Now</button>
             </div>
         </div>
     </main>
@@ -61,6 +61,7 @@
     </footer>
 </body>
 </html>
+
 <style>
 /* Reset default margin and padding for a consistent layout */
 body {
@@ -147,6 +148,29 @@ nav a {
     line-height: 1.5; /* Improve readability */
     max-width: 80%; /* Limit text width for better readability */
     margin: 0 auto; /* Center text */
+}
+/* Course Card Styling */
+.course-card {
+    background-color: #F6F4F0; /* Soft light background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border: 2px solid #2E5077; /* Dark blue-gray border */
+    margin: 20px;
+    text-align: left;
+}
+.enroll-button {
+    background-color: #2E5077; /* Dark blue background */
+    color: #F6F4F0; /* Light text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition effects */
+}
+.enroll-button:hover {
+    background-color: #4DA1A9; /* Change background color on hover */
+    transform: translateY(-3px); /* Move button up slightly on hover */
 }
 /* Footer Styling */
 footer {
