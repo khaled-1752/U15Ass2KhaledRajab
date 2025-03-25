@@ -29,12 +29,18 @@
     <main class="mainpage" role="main"> <!-- Main section for primary content with an accessibility role -->
         <section class="about-section">
             <h2>Who We Are</h2> <!-- Section heading -->
+            <div class="image-container">
+                <img src="images/who_we_are.jpg" alt="Who We Are" class="about-img"> <!-- Related image -->
+            </div>
             <p>Slovenské Vzdelávacie Centrum – South Manchester is a registered charity committed to the preservation and promotion of Slovak language and culture. We offer Slovak language education and organize cultural and community events aimed at assisting Slovak-speaking families in maintaining their heritage while residing abroad.</p>
             <p>Although our primary focus is on supporting Slovak-speaking children and families, we extend a warm invitation to anyone interested in learning the Slovak language and engaging with our cultural traditions. In addition to our Saturday school, we provide a variety of workshops, events, and social gatherings that allow individuals of all ages to connect, learn, and participate in our cultural community.</p>
         </section>
 
         <section class="about-section">
             <h2>Our Mission</h2> <!-- Section heading -->
+            <div class="image-container">
+                <img src="images/our_mission.jpg" alt="Our Mission" class="about-img"> <!-- Related image -->
+            </div>
             <p>At Slovenské Vzdelávacie Centrum – South Manchester, our mission transcends merely teaching the Slovak language. We strive to keep our heritage vibrant, ensuring that children raised abroad retain their connection to their roots, and to foster an environment where Slovak culture can flourish, even when far from home.</p>
             <p>We hold the belief that language encompasses more than mere words; it embodies identity, history, and a sense of belonging. Through our initiatives, we unite Slovak-speaking families, facilitating friendships, reinforcing cultural bonds, and helping them feel at home while living in the UK.</p>
             <p>Education is central to our efforts, but our mission reaches beyond that. We aim to bridge the divide between the UK and Slovak education systems, ensuring that children who may eventually return to Slovakia can do so seamlessly. We are dedicated to supporting families, providing guidance, and ensuring that no one feels adrift while navigating life between two nations.</p>
@@ -43,6 +49,9 @@
 
         <section class="about-section">
             <h2>Our Journey</h2> <!-- Section heading -->
+            <div class="image-container">
+                <img src="images/our_journey.jpg" alt="Our Journey" class="about-img"> <!-- Related image -->
+            </div>
             <p>Slovenské Vzdelávacie Centrum – South Manchester was established by a group of passionate educators who shared a unified vision—to create a Slovak educational and cultural center that truly makes a positive impact.</p>
             <p>Driven by our commitment to education, culture, and community development, we dedicated ourselves to establishing a space where Slovak families could access high-quality educational resources and cultural experiences.</p>
             <p>After months of diligent effort, we were delighted to achieve registered charity status on September 9, 2024, representing a pivotal milestone in our journey. Our official launch on September 15 was a moment of great pride, celebrated in partnership with the Faculty of Education at Univerzita Mateja Bela and the Association of Slovak Schools and Community Centres in the UK.</p>
@@ -51,11 +60,17 @@
 
         <section class="about-section">
             <h2>Our Offerings and Support</h2> <!-- Section heading -->
+            <div class="image-container">
+                <img src="images/offerings_support.jpg" alt="Our Offerings and Support" class="about-img"> <!-- Related image -->
+            </div>
             <p>At Slovenské Vzdelávacie Centrum – South Manchester, we deliver Slovak language education, organize cultural events, and assist Slovak-speaking families in navigating their lives between the UK and Slovakia. Whether you seek to learn, maintain your cultural ties, or find support, we are here to assist you.</p>
         </section>
 
         <section class="about-section">
             <h2>Our Services</h2> <!-- Section heading -->
+            <div class="image-container">
+                <img src="images/our_services.jpg" alt="Our Services" class="about-img"> <!-- Related image -->
+            </div>
             <p>We conduct Saturday Slovak language classes for both children and adults, along with various cultural and community activities:</p>
             <ul>
                 <li>Morning Classes: 10:00 – 12:00 at The Firs Primary School</li>
@@ -73,6 +88,9 @@
 
         <section class="about-section">
             <h2>Our Support</h2> <!-- Section heading -->
+            <div class="image-container">
+                <img src="images/our_support.jpg" alt="Our Support" class="about-img"> <!-- Related image -->
+            </div>
             <p>In addition to educational and cultural initiatives, we provide practical assistance for Slovak-speaking families as they navigate life in the UK or transition back to Slovakia:</p>
             <ul>
                 <li>Assistance with ‘Komisionálne Skúšky’ – Supporting children in maintaining their educational progress.</li>
@@ -95,7 +113,8 @@ body {
     padding: 0;
     text-align: center; /* Centers text globally */
     color: black; /* Sets the default font color to black */
-} 
+    background-color: #E0F7FA; /* Light blue background color */
+}
 /* Header Styling */
 header {
     display: flex; /* Uses flexbox for layout */
@@ -138,13 +157,18 @@ header {
     text-align: left; /* Align text to the left for better readability */
 }
 .mainpage section {
-    background-color: #79D7BE; /* Light teal background */
+    background-color: #B3E5FC; /* Light blue background */
     padding: 20px; /* Add space inside the main section */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
     border: 2px solid #2E5077; /* Dark blue-gray border */
     width: 80%; /* Limit section width for better readability */
     margin: 20px auto; /* Center horizontally */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition effects */
+}
+.mainpage section:hover {
+    transform: translateY(-5px); /* Move section up slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }
 .mainpage section h2 {
     color: #2E5077; /* Dark blue-gray color for heading */
@@ -161,7 +185,7 @@ header {
 }
 .image-container {
     display: flex; /* Display images horizontally */
-    justify-content: space-around; /* Space images evenly */
+    justify-content: center; /* Center images */
     flex-wrap: nowrap; /* Do not allow images to wrap to the next line */
     padding: 20px 0; /* Add padding above and below the images */
     overflow-x: auto; /* Enable horizontal scrolling if necessary */
@@ -169,7 +193,7 @@ header {
 .about-img {
     width: auto; /* Maintain image width */
     max-width: 200px; /* Set maximum width */
-    height: 100px; /* Set fixed height */
+    height: 150px; /* Set fixed height */
     margin: 10px; /* Add margin around images */
     border-radius: 10px; /* Rounded corners for images */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition effects */
