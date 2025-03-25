@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!-- Declares the document type and sets the language of the webpage -->
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Event Sign-Up Form</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" /> <!-- Sets the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures proper responsive behavior on mobile devices -->
+    <title>Event Sign-Up Form</title> <!-- Sets the title of the webpage -->
+    <link rel="stylesheet" href="styles.css" /> <!-- Links the external CSS file -->
     <style>
         /* Reset default margin and padding for a consistent layout */
         body {
@@ -35,6 +35,13 @@
             color: #F6F4F0;
             text-decoration: none;
             margin: 0 10px;
+            transition: color 0.3s ease, background-color 0.3s ease; /* Add transition effects */
+        }
+        nav a:hover {
+            color: #2E5077;
+            background-color: #F6F4F0;
+            padding: 10px;
+            border-radius: 5px;
         }
         /* Form Container Styling */
         .form-container {
@@ -42,9 +49,9 @@
             padding: 20px;
             border-radius: 10px;
             text-align: center;
-            width: 100%;
-            max-width: 100%;
-            margin: 0 auto;
+            width: 80%;
+            max-width: 600px; /* Limit the width for better readability */
+            margin: 20px auto; /* Center horizontally with some margin */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border: 2px solid #2E5077;
         }
@@ -84,6 +91,11 @@
             border: none;
             padding: 10px;
             cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition effects */
+        }
+        .form-container form button:hover {
+            background-color: #4DA1A9; /* Change background color on hover */
+            transform: translateY(-3px); /* Move button up slightly on hover */
         }
     </style>
 </head>
