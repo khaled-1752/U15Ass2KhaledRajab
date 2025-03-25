@@ -30,11 +30,13 @@
         <section class="about-section">
             <h2>About Slovenske Vzdelavacie Centrum</h2> <!-- Main heading for the section -->
             <p>At Slovenske Vzdelavacie Centrum, we aim to provide comprehensive and high-quality educational resources to our community. Founded in 2025, our organization has grown to become a leading provider of learning opportunities and support.</p> <!-- Paragraph describing the organization -->
-            <img src="images/mission.jpg" alt="Our Mission" class="about-img"> <!-- Mission image -->
+            <div class="image-container">
+                <img src="images/mission.jpg" alt="Our Mission" class="about-img"> <!-- Mission image -->
+                <img src="images/values.png" alt="Our Values" class="about-img"> <!-- Values image -->
+                <img src="images/team.jpg" alt="Our Team" class="about-img"> <!-- Team image -->
+            </div>
             <p>Our mission is to empower individuals through education, providing them with the skills and knowledge they need to succeed. We believe in the power of learning to transform lives and communities.</p> <!-- Mission description -->
-            <img src="images/values.png" alt="Our Values" class="about-img"> <!-- Values image -->
             <p>We are guided by our core values of integrity, innovation, and inclusivity. We strive to create an environment where everyone feels welcome and supported in their educational journey.</p> <!-- Values description -->
-            <img src="images/team.jpg" alt="Our Team" class="about-img"> <!-- Team image -->
             <p>Our dedicated team of educators, support staff, and volunteers work tirelessly to provide the best possible learning experience. We are passionate about education and committed to helping our community thrive.</p> <!-- Team description -->
         </section>
     </main>
@@ -114,15 +116,23 @@ nav a:hover {
     font-size: 16px; /* Adjust font size */
     line-height: 1.5; /* Improve readability */
 }
-.about-img {
-    width: 100%; /* Make images responsive */
-    max-width: 600px; /* Set a maximum width */
-    height: auto; /* Maintain aspect ratio */
-    margin: 20px 0; /* Add margin above and below images */
-    border-radius: 10px; /* Rounded corners for images */
+.image-container {
+    display: flex; /* Display images horizontally */
+    justify-content: space-around; /* Space images evenly */
+    flex-wrap: wrap; /* Allow images to wrap to the next line if necessary */
+    padding: 20px 0; /* Add padding above and below the images */
 }
-.about-section {
-    text-align: center; /* Center text in the about section */
+.about-img {
+    width: 30%; /* Set width of images */
+    max-width: 200px; /* Set maximum width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px; /* Add margin around images */
+    border-radius: 10px; /* Rounded corners for images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition effects */
+}
+.about-img:hover {
+    transform: translateY(-5px); /* Move image up slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }
 /* Additional Content Section Styling */
 .content {
