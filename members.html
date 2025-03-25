@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!-- Declares the document type and sets the language of the webpage -->
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Membership sign up form</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" /> <!-- Sets the character encoding for the document to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures the webpage is responsive on all screen sizes -->
+    <title>Membership sign up form</title> <!-- Sets the title of the webpage, shown on the browser tab -->
+    <link rel="stylesheet" href="styles.css" /> <!-- Links an external CSS file for styling -->
     <style>
         /* Reset default margin and padding for a consistent layout */
         body {
@@ -12,36 +12,43 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            color: black; /* Sets the default font color to black */
         }
         /* Header Styling */
         header {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start; /* Align items to the start */
             align-items: center;
             padding: 20px;
-            background-color: #F6F4F0;
+            background-color: #2E5077; /* Matches nav bar color */
             border-bottom: 2px solid #4DA1A9;
+            position: relative; /* Set position for absolute positioning of nav */
         }
         /* Logo Styling */
         .logo {
             max-width: 100px;
+            margin-right: 20px; /* Adds space between logo and nav */
         }
         /* Navigation Bar Styling */
-        nav {
-            background-color: #2E5077;
+        .navbar {
+            position: absolute; /* Position navigation absolutely within the header */
+            top: 20px; /* Align navigation to the top */
+            right: 20px; /* Align navigation to the right */
+            background-color: #2E5077; /* Dark blue background for contrast */
             padding: 10px;
+            border-radius: 5px; /* Add rounded corners */
         }
-        nav a {
-            color: #F6F4F0;
-            text-decoration: none;
-            margin: 0 10px;
+        .navbar a {
+            color: #F6F4F0; /* Soft light text for contrast */
+            text-decoration: none; /* Removes underline from links */
+            margin: 0 10px; /* Adds spacing between links */
             transition: color 0.3s ease, background-color 0.3s ease; /* Add transition effects */
         }
-        nav a:hover {
-            color: #2E5077;
-            background-color: #F6F4F0;
-            padding: 10px;
-            border-radius: 5px;
+        .navbar a:hover {
+            color: #2E5077; /* Change text color on hover */
+            background-color: #F6F4F0; /* Change background color on hover */
+            padding: 10px; /* Add padding on hover */
+            border-radius: 5px; /* Add rounded corners on hover */
         }
         /* Form Container Styling */
         .form-container {
@@ -102,19 +109,18 @@
 <body>
     <!-- Header Section with Logo -->
     <header role="banner" class="site-header">
-        <h1>Slovenske Vzdelavacie Centrum</h1>
         <img src="images/logo.png" alt="Logo" class="logo" />
+        
+        <!-- Navigation Bar -->
+        <nav role="navigation" class="navbar">
+            <a href="index.html">Homepage</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="courses.html">Courses</a>
+            <a href="dates.html">Dates</a>
+            <a href="educationgames.html">Education Games</a>
+            <a href="members.html">Members</a>
+        </nav>
     </header>
-
-    <!-- Navigation Section -->
-    <nav>
-        <a href="index.html">Homepage</a>
-        <a href="aboutus.html">About Us</a>
-        <a href="courses.html">Courses</a>
-        <a href="dates.html">Dates</a>
-        <a href="educationgames.html">Education Games</a>
-        <a href="members.html">Members</a>
-    </nav>
 
     <!-- Form Container -->
     <div class="form-container">
