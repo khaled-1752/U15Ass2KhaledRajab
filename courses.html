@@ -11,19 +11,18 @@
 <body>
     <!-- Header Section with Logo -->
     <header role="banner" class="site-header"> <!-- Defines a banner role for accessibility -->
-        <h1>Slovenske Vzdelavacie Centrum</h1> <!-- Displays the website's main title -->
         <img src="images/logo.png" alt="Logo" class="logo" /> <!-- Displays the site logo with a descriptive alt text -->
+        
+        <!-- Navigation Bar -->
+        <nav role="navigation" class="navbar"> <!-- Adds navigation role for accessibility -->
+            <a href="index.html">Homepage</a> <!-- Navigation link to the Homepage -->
+            <a href="aboutus.html">About Us</a> <!-- Navigation link to the About Us page -->
+            <a href="courses.html">Courses</a> <!-- Navigation link to the Courses page -->
+            <a href="dates.html">Dates</a> <!-- Navigation link to the Dates page -->
+            <a href="educationgames.html">Education Games</a> <!-- Navigation link to the Education Games page -->
+            <a href="members.html">Members</a> <!-- Navigation link to the Members page -->
+        </nav>
     </header>
-
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="index.html">Homepage</a>
-        <a href="aboutus.html">About Us</a>
-        <a href="courses.html">Courses</a>
-        <a href="dates.html">Dates</a>
-        <a href="educationgames.html">Education Games</a>
-        <a href="members.html">Members</a>
-    </nav>
 
     <!-- Main Content Section -->
     <main>
@@ -77,129 +76,81 @@ body {
 /* Header Styling */
 header {
     display: flex; /* Uses flexbox for layout */
-    justify-content: space-between; /* Pushes content to opposite sides */
+    justify-content: flex-start; /* Align items to start */
     align-items: center; /* Aligns items vertically */
     padding: 20px;
-    background-color: #F6F4F0; /* Soft light background */
+    background-color: #2E5077; /* Matches nav bar color */
     border-bottom: 2px solid #4DA1A9; /* Subtle bottom border in teal */
+    position: relative; /* Set position for absolute positioning of nav */
 } 
 /* Logo Styling */
 .logo {
     max-width: 100px; /* Restricts logo size */
+    margin-right: 20px; /* Adds space between logo and nav */
 } 
 /* Navigation Bar Styling */
-nav {
+.navbar {
+    position: absolute; /* Position navigation absolutely within the header */
+    top: 20px; /* Align navigation to the top */
+    right: 20px; /* Align navigation to the right */
     background-color: #2E5077; /* Dark blue background for contrast */
     padding: 10px;
+    border-radius: 5px; /* Add rounded corners */
 }
-nav a {
+.navbar a {
     color: #F6F4F0; /* Soft light text for contrast */
     text-decoration: none; /* Removes underline from links */
     margin: 0 10px; /* Adds spacing between links */
     transition: color 0.3s ease, background-color 0.3s ease; /* Add transition effects */
 }
-nav a:hover {
+.navbar a:hover {
     color: #2E5077; /* Change text color on hover */
     background-color: #F6F4F0; /* Change background color on hover */
     padding: 10px; /* Add padding on hover */
     border-radius: 5px; /* Add rounded corners on hover */
 }
 /* Main Content Section Styling */
-.mainpage {
+main {
     padding: 20px;
     text-align: left; /* Align text to the left for better readability */
 }
-.mainpage section {
-    background-color: #79D7BE; /* Light teal background */
-    padding: 20px; /* Add space inside the main section */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    border: 2px solid #2E5077; /* Dark blue-gray border */
-    width: 80%; /* Limit section width for better readability */
-    margin: 0 auto; /* Center horizontally */
-}
-.mainpage section h2 {
-    color: #2E5077; /* Dark blue-gray color for heading */
-    font-size: 24px; /* Adjust font size */
-}
-.mainpage section p {
-    color: black; /* Sets the paragraph text color to black */
-    font-size: 16px; /* Adjust font size */
-    line-height: 1.5; /* Improve readability */
-}
-.about-img {
-    width: 100%; /* Make images responsive */
-    max-width: 600px; /* Set a maximum width */
-    height: auto; /* Maintain aspect ratio */
-    margin: 20px 0; /* Add margin above and below images */
-    border-radius: 10px; /* Rounded corners for images */
-}
-.about-section {
-    text-align: center; /* Center text in the about section */
-}
-/* Additional Content Section Styling */
-.content {
-    background-color: #79D7BE; /* Light teal background */
-    padding: 20px; /* Add space inside the section */
-    border-radius: 10px; /* Rounded corners */
-    text-align: center; /* Center text */
-    width: 80%; /* Limit section width for better readability */
-    margin: 20px auto; /* Center horizontally with some margin */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    border: 2px solid #2E5077; /* Dark blue-gray border */
-}
-.content h2 {
-    color: #2E5077; /* Dark blue-gray color for heading */
-    font-size: 24px; /* Adjust font size */
-}
-.content p {
-    color: black; /* Sets the paragraph text color to black */
-    font-size: 16px; /* Adjust font size */
-    line-height: 1.5; /* Improve readability */
-    max-width: 80%; /* Limit text width for better readability */
-    margin: 0 auto; /* Center text */
-}
-/* Course Card Styling */
-.courses {
-    display: flex; /* Display courses horizontally */
-    justify-content: space-around; /* Space courses evenly */
-    flex-wrap: wrap; /* Allow courses to wrap to the next line if necessary */
-    padding: 20px 0; /* Add padding above and below the courses */
-}
-.course-card {
-    background-color: #F6F4F0; /* Soft light background */
+.sections {
+    display: flex; /* Enables side-by-side layout */
+    flex-wrap: wrap; /* Allows sections to wrap to the next line if necessary */
+    justify-content: space-around; /* Spaces sections evenly */
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    border: 2px solid #2E5077; /* Dark blue-gray border */
-    margin: 20px;
-    text-align: left;
-    width: 30%; /* Set width of course cards */
-    max-width: 300px; /* Set maximum width of course cards */
 }
-.course-img {
-    width: 100%; /* Set width of images */
-    height: auto; /* Maintain aspect ratio */
-    margin: 10px 0; /* Add margin around images */
-    border-radius: 10px; /* Rounded corners for images */
+/* Individual Section Styling */
+.section {
+    width: 45%; /* Sets equal width for sections */
+    padding: 20px;
+    margin: 10px 0; /* Adds margin between sections */
+    border: 2px solid #4DA1A9; /* Subtle border in teal */
+    background-color: #F6F4F0; /* Soft light background for readability */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    text-align: center; /* Center text in sections */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition effects */
 }
-.course-img:hover {
-    transform: translateY(-5px); /* Move image up slightly on hover */
+.section:hover {
+    transform: translateY(-5px); /* Move section up on hover */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }
-.enroll-button {
-    background-color: #2E5077; /* Dark blue background */
-    color: #F6F4F0; /* Light text */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition effects */
+.section h3 {
+    color: #2E5077; /* Dark blue-gray color for heading */
+    font-size: 20px; /* Adjust font size */
 }
-.enroll-button:hover {
-    background-color: #4DA1A9; /* Change background color on hover */
-    transform: translateY(-3px); /* Move button up slightly on hover */
+.section p {
+    color: black; /* Sets the paragraph text color to black */
+    font-size: 16px; /* Adjust font size */
+    line-height: 1.5; /* Improve readability */
+}
+.section-img {
+    width: 100%; /* Make images responsive */
+    max-width: 300px; /* Set a maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for images */
+    margin: 10px 0; /* Add margin above and below images */
 }
 /* Footer Styling */
 footer {
