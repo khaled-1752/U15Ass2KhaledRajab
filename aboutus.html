@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en"> <!-- Declares the document type and sets the language of the webpage -->
 <head>
-    <meta charset="UTF-8" /> <!-- Sets the character encoding of the document to UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures the webpage is responsive on all screen sizes -->
-    <title>Education Games</title> <!-- Sets the title of the webpage, shown on the browser tab -->
-    <link href="/css/style.css" rel="stylesheet" /> <!-- Links an external CSS file for styling -->
-    <script src="/scripts/javascript.js" defer></script> <!-- Links an external JavaScript file and ensures it executes after the HTML is fully parsed -->
+    <meta charset="UTF-8" /> <!-- Sets the character encoding for the document to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures the webpage is responsive on mobile devices -->
+    <meta name="description" content="Learn more about our charity organization and our mission, values, and team." /> <!-- Provides a description for search engines (SEO) -->
+    <title>About Us</title> <!-- Specifies the title of the webpage, shown in the browser tab -->
+    <link href="css/style.css" rel="stylesheet" /> <!-- Links to an external CSS file for styling -->
+    <script src="scripts/javascript.js" defer></script> <!-- Links to an external JavaScript file, set to load after the HTML -->
 </head>
 <body>
     <!-- Header Section with Logo -->
@@ -26,21 +27,27 @@
 
     <!-- Main Content Section -->
     <main class="mainpage" role="main"> <!-- Declares the main section and assigns it a role for accessibility -->
-        <section> <!-- Groups related content into a semantic section -->
-            <h2>Welcome to Our Education Games</h2> <!-- Main heading for the section -->
-            <p>Discover our interactive and engaging educational games designed to make learning fun!</p> <!-- Short description introducing the section -->
+        <section class="about-section">
+            <h2>About Slovenske Vzdelavacie Centrum</h2> <!-- Main heading for the section -->
+            <p>At Slovenske Vzdelavacie Centrum, we aim to provide comprehensive and high-quality educational resources to our community. Founded in 2025, our organization has grown to become a leading provider of learning opportunities and support.</p> <!-- Paragraph describing the organization -->
+            <img src="images/mission.jpg" alt="Our Mission" class="about-img"> <!-- Mission image -->
+            <p>Our mission is to empower individuals through education, providing them with the skills and knowledge they need to succeed. We believe in the power of learning to transform lives and communities.</p> <!-- Mission description -->
+            <img src="images/values.png" alt="Our Values" class="about-img"> <!-- Values image -->
+            <p>We are guided by our core values of integrity, innovation, and inclusivity. We strive to create an environment where everyone feels welcome and supported in their educational journey.</p> <!-- Values description -->
+            <img src="images/team.jpg" alt="Our Team" class="about-img"> <!-- Team image -->
+            <p>Our dedicated team of educators, support staff, and volunteers work tirelessly to provide the best possible learning experience. We are passionate about education and committed to helping our community thrive.</p> <!-- Team description -->
         </section>
     </main>
 
     <!-- Additional Content Section -->
     <section class="content" role="complementary"> <!-- Declares a complementary section for details -->
-        <h2>Game Features</h2> <!-- Subheading for the additional content section -->
-        <p>Our games focus on interactive learning, problem-solving, and teamwork. Stay tuned for updates on new games!</p> <!-- Descriptive paragraph about the games -->
+        <h2>Our Story</h2> <!-- Subheading for the additional content section -->
+        <p>Founded in 2025, we are dedicated to delivering high-quality learning and support. Our team is passionate about providing valuable resources and opportunities to help our community thrive.</p> <!-- Descriptive paragraph about the organization's story -->
     </section>
 
     <!-- Footer Section -->
-    <footer role="contentinfo"> <!-- Declares the footer as a contentinfo role for accessibility -->
-        <p>&copy; 2025 Slovenske Vzdelavacie Centrum. All rights reserved.</p> <!-- Displays copyright information -->
+    <footer>
+        <p>&copy; 2025 Slovenske Vzdelavacie Centrum. All rights reserved.</p>
     </footer>
 </body>
 </html>
@@ -89,13 +96,41 @@ nav a:hover {
     padding: 20px;
     text-align: left; /* Align text to the left for better readability */
 }
-.content {
+.mainpage section {
     background-color: #79D7BE; /* Light teal background */
     padding: 20px; /* Add space inside the main section */
     border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border: 2px solid #2E5077; /* Dark blue-gray border */
+    width: 80%; /* Limit section width for better readability */
+    margin: 0 auto; /* Center horizontally */
+}
+.mainpage section h2 {
+    color: #2E5077; /* Dark blue-gray color for heading */
+    font-size: 24px; /* Adjust font size */
+}
+.mainpage section p {
+    color: black; /* Sets the paragraph text color to black */
+    font-size: 16px; /* Adjust font size */
+    line-height: 1.5; /* Improve readability */
+}
+.about-img {
+    width: 100%; /* Make images responsive */
+    max-width: 600px; /* Set a maximum width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px 0; /* Add margin above and below images */
+    border-radius: 10px; /* Rounded corners for images */
+}
+.about-section {
+    text-align: center; /* Center text in the about section */
+}
+/* Additional Content Section Styling */
+.content {
+    background-color: #79D7BE; /* Light teal background */
+    padding: 20px; /* Add space inside the section */
+    border-radius: 10px; /* Rounded corners */
     text-align: center; /* Center text */
     width: 80%; /* Limit section width for better readability */
-    max-width: 80%; /* Ensure it doesn't exceed the viewport */
     margin: 20px auto; /* Center horizontally with some margin */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
     border: 2px solid #2E5077; /* Dark blue-gray border */
@@ -105,23 +140,11 @@ nav a:hover {
     font-size: 24px; /* Adjust font size */
 }
 .content p {
-    color: #4DA1A9; /* Medium teal for paragraph text */
+    color: black; /* Sets the paragraph text color to black */
     font-size: 16px; /* Adjust font size */
     line-height: 1.5; /* Improve readability */
     max-width: 80%; /* Limit text width for better readability */
     margin: 0 auto; /* Center text */
-}
-.sections {
-    display: flex; /* Enables side-by-side layout */
-    justify-content: space-around; /* Spaces sections evenly */
-    padding: 20px;
-}
-/* Individual Section Styling */
-.section {
-    width: 45%; /* Sets equal width for both sections */
-    padding: 20px;
-    border: 1px solid #4DA1A9; /* Subtle border in teal */
-    background-color: #F6F4F0; /* Soft light background for readability */
 }
 /* Footer Styling */
 footer {
