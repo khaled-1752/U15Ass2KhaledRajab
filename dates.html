@@ -55,14 +55,15 @@
     </footer>
 </body>
 </html>
+
 <style>
-    
 /* Reset default margin and padding for a consistent layout */
 body {
     font-family: Arial, sans-serif; /* Sets the default font style */
     margin: 0;
     padding: 0;
     text-align: center; /* Centers text globally */
+    color: black; /* Sets the default font color to black */
 } 
 /* Header Styling */
 header {
@@ -88,39 +89,32 @@ nav a {
     margin: 0 10px; /* Adds spacing between links */
 } 
 /* Main Content Section Styling */
-.content {
-    background-color: #79D7BE; /* Light teal background */
-    padding: 20px; /* Add space inside the main section */
-    border-radius: 10px; /* Rounded corners */
-    text-align: center; /* Center text */
-    width: 100%; /* Full width */
-    max-width: 100%; /* Ensure it doesn't exceed the viewport */
-    margin: 0 auto; /* Center horizontally */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+main {
+    padding: 20px;
+    text-align: center; /* Center text for main content */
+}
+.dropdown-container {
+    margin: 20px 0; /* Add margin above and below the dropdown */
+}
+.dropdown-container select {
+    padding: 10px; /* Add padding inside the dropdown */
+    border-radius: 5px; /* Rounded corners */
     border: 2px solid #2E5077; /* Dark blue-gray border */
-}
-.content h2 {
-    color: #2E5077; /* Dark blue-gray color for heading */
-    font-size: 24px; /* Adjust font size */
-}
-.content p {
-    color: #4DA1A9; /* Medium teal for paragraph text */
     font-size: 16px; /* Adjust font size */
-    line-height: 1.5; /* Improve readability */
-    max-width: 80%; /* Limit text width for better readability */
-    margin: 0 auto; /* Center text */
+    background-color: #F6F4F0; /* Soft light background */
 }
-.sections {
-    display: flex; /* Enables side-by-side layout */
-    justify-content: space-around; /* Spaces sections evenly */
-    padding: 20px;
+.enroll-button {
+    background-color: #2E5077; /* Dark blue background */
+    color: #F6F4F0; /* Light text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition effects */
 }
-/* Individual Section Styling */
-.section {
-    width: 45%; /* Sets equal width for both sections */
-    padding: 20px;
-    border: 1px solid #4DA1A9; /* Subtle border in teal */
-    background-color: #F6F4F0; /* Soft light background for readability */
+.enroll-button:hover {
+    background-color: #4DA1A9; /* Change background color on hover */
+    transform: translateY(-3px); /* Move button up slightly on hover */
 }
 /* Footer Styling */
 footer {
@@ -128,5 +122,6 @@ footer {
     color: #F6F4F0; /* Soft light text for contrast */
     padding: 10px;
     position: relative;
+    text-align: center; /* Center text in the footer */
 }
 </style>
