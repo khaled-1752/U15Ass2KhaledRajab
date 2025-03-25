@@ -11,7 +11,6 @@
 <body>
     <!-- Header Section with Logo -->
     <header role="banner" class="site-header"> <!-- Defines a banner role for accessibility -->
-        <h1>Slovenske Vzdelavacie Centrum</h1> <!-- Displays the website's main title -->
         <img src="images/logo.png" alt="Logo" class="logo" /> <!-- Displays the site logo with a descriptive alt text -->
         
         <!-- Navigation Bar -->
@@ -66,7 +65,7 @@ body {
 /* Header Styling */
 header {
     display: flex; /* Uses flexbox for layout */
-    justify-content: space-between; /* Pushes content to opposite sides */
+    justify-content: flex-start; /* Align items to start */
     align-items: center; /* Aligns items vertically */
     padding: 20px;
     background-color: #F6F4F0; /* Soft light background */
@@ -76,6 +75,7 @@ header {
 /* Logo Styling */
 .logo {
     max-width: 100px; /* Restricts logo size */
+    margin-right: 20px; /* Adds space between logo and nav */
 } 
 /* Navigation Bar Styling */
 .navbar {
